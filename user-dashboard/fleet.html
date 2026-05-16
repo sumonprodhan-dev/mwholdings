@@ -37,7 +37,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/frontend/index.html" title="View Home">
+                        <a class="nav-link" href="../index.html" data-bs-toggle="tooltip" title="View Home">
                             <i class="bi bi-globe"></i>
                         </a>
                     </li>
@@ -65,13 +65,14 @@
                     </li>
                     <!--end::Navbar Search-->
                     <li class="nav-item">
-                        <a class="nav-link" id="dark-mode-toggle" href="#" role="button">
+                        <a class="nav-link" id="dark-mode-toggle" href="#" data-bs-toggle="tooltip"
+                            title="Dark Mode / Light Mode" role="button">
                             <i class="bi bi-moon-stars-fill"></i>
                         </a>
                     </li>
 
                     <!--begin::Notifications Dropdown Menu-->
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown" data-bs-toggle="tooltip" title="Notifications">
                         <a class="nav-link" data-bs-toggle="dropdown" href="#">
                             <i class="bi bi-bell-fill"></i>
                             <span class="navbar-badge badge text-bg-warning">15</span>
@@ -100,7 +101,7 @@
                     <!--end::Notifications Dropdown Menu-->
 
                     <!--begin::User Menu Dropdown-->
-                    <li class="nav-item dropdown user-menu">
+                    <li class="nav-item dropdown user-menu" data-bs-toggle="tooltip" title="Profile">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img src="./assets/images/sp.jpg" class="user-image rounded-circle shadow" alt="User Image">
                             <!-- <span class="d-none d-md-inline">SP</span> -->
@@ -478,7 +479,62 @@
                     <!-- P&D Medals Content (Weekly Grid Calendar jeta ektu age banalam) -->
                     <div class="tab-pane fade show active" id="pills-medals" role="tabpanel"
                         aria-labelledby="pills-medals-tab">
-                        <h5>P&D Medals Content Goes Here...</h5>
+                        <!-- Top 3 Stats Grid -->
+                        <div class="row g-4">
+                            <!-- Efficiency -->
+                            <div class="col-md-2">
+                                <div class="card h-100 border-0 rounded-3 text-center stat-box py-4 hover-item"
+                                    style="background-color: #f8f9fa; border-top: 4px solid #dc3545 !important;">
+                                    <h3 class="fw-bold mb-0" style="color: #dc3545;">43</h3>
+                                    <small class="text-muted d-block">Total Drivers</small>
+                                </div>
+                            </div>
+                            <!-- Quality -->
+                            <div class="col-md-2">
+                                <div class="card h-100 border-0 rounded-3 text-center py-4 stat-box hover-item"
+                                    style="background-color: #f8f9fa; border-top: 4px solid #21c45d !important;">
+                                    <h3 class="fw-bold mb-0 text-success">20</h3>
+                                    <small class="text-muted d-block">Active</small>
+                                </div>
+                            </div>
+                            <!-- Financial -->
+                            <div class="col-md-2">
+                                <div class="card h-100 border-0 rounded-3 text-center py-4 stat-box hover-item"
+                                    style="background-color: #f8f9fa; border-top: 4px solid #f50101 !important;">
+                                    <h3 class="fw-bold mb-0 text-danger">3</h3>
+                                    <small class="text-muted d-block">High Risk</small>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="card h-100 border-0 rounded-3 text-center py-4 stat-box hover-item"
+                                    style="background-color: #f8f9fa; border-top: 4px solid #ffe600 !important;">
+                                    <h3 class="fw-bold mb-0 text-warning">3</h3>
+                                    <small class="text-muted d-block">Recent Incidents</small>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="card h-100 border-0 rounded-3 text-center py-4 stat-box hover-item"
+                                    style="background-color: #f8f9fa; border-top: 4px solid #ffe600 !important;">
+                                    <h3 class="fw-bold mb-0 text-warning">3</h3>
+                                    <small class="text-muted d-block">Recent Incidents</small>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="card h-100 border-0 rounded-3 text-center py-4 stat-box hover-item"
+                                    style="background-color: #f8f9fa; border-top: 4px solid #ffe600 !important;">
+                                    <h3 class="fw-bold mb-0 text-warning">3</h3>
+                                    <small class="text-muted d-block">Recent Incidents</small>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="card h-100 border-0 rounded-3 text-center py-4 stat-box hover-item"
+                                    style="background-color: #f8f9fa; border-top: 4px solid #ffe600 !important;">
+                                    <h3 class="fw-bold mb-0 text-warning">3</h3>
+                                    <small class="text-muted d-block">Recent Incidents</small>
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
 
                     <!-- Resources Overview Content -->

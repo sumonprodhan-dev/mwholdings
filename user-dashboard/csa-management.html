@@ -25,109 +25,109 @@
     <div class="app-wrapper">
         <!--begin::Header-->
         <nav class="app-header navbar navbar-expand shadow-sm" id="navigation" tabindex="-1">
-            <!--begin::Container-->
-            <div class="container-fluid">
-                <!--begin::Start Navbar Links-->
-                <ul class="navbar-nav d-flex flex-row align-items-center" role="navigation" aria-label="Navigation 1">
+      <!--begin::Container-->
+      <div class="container-fluid">
+        <!--begin::Start Navbar Links-->
+        <ul class="navbar-nav d-flex flex-row align-items-center" role="navigation" aria-label="Navigation 1">
 
-                    <li class="nav-item">
-                        <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button">
-                            <i class="bi bi-list"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/frontend/index.html" title="View Home">
-                            <i class="bi bi-globe"></i>
-                        </a>
-                    </li>
+          <li class="nav-item">
+            <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button">
+              <i class="bi bi-list"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html" data-bs-toggle="tooltip" title="View Home">
+              <i class="bi bi-globe"></i>
+            </a>
+          </li>
 
-                    <li class="nav-item ms-2">
-                        <p class="mb-0 fw-semibold" style="font-size: 25px;">Overview</p>
-                    </li>
+          <li class="nav-item ms-2">
+            <p class="mb-0 fw-semibold" style="font-size: 25px;">Overview</p>
+          </li>
 
-                </ul>
-                <!--end::Start Navbar Links-->
+        </ul>
+        <!--end::Start Navbar Links-->
 
-                <!--begin::End Navbar Links-->
-                <ul class="navbar-nav ms-auto" role="navigation" aria-label="Navigation 2">
-                    <!-- begin::Navbar Search -->
-                    <li class="nav-item d-none d-md-block me-3">
-                        <form class="search-form" action="#" method="GET">
-                            <div class="input-group search-group">
-                                <span class="input-group-text border-0 bg-transparent pe-0">
-                                    <i class="bi bi-search text-secondary"></i>
-                                </span>
-                                <input type="text" class="form-control border-0 shadow-none ps-2"
-                                    placeholder="Search cars, drivers..." aria-label="Search">
-                            </div>
-                        </form>
-                    </li>
-                    <!--end::Navbar Search-->
-                    <li class="nav-item">
-                        <a class="nav-link" id="dark-mode-toggle" href="#" role="button">
-                            <i class="bi bi-moon-stars-fill"></i>
-                        </a>
-                    </li>
+        <!--begin::End Navbar Links-->
+        <ul class="navbar-nav ms-auto" role="navigation" aria-label="Navigation 2">
+          <!-- begin::Navbar Search -->
+          <li class="nav-item d-none d-md-block me-3">
+            <form class="search-form" action="#" method="GET">
+              <div class="input-group search-group">
+                <span class="input-group-text border-0 bg-transparent pe-0">
+                  <i class="bi bi-search text-secondary"></i>
+                </span>
+                <input type="text" class="form-control border-0 shadow-none ps-2" placeholder="Search cars, drivers..."
+                  aria-label="Search">
+              </div>
+            </form>
+          </li>
+          <!--end::Navbar Search-->
+          <li class="nav-item">
+            <a class="nav-link" id="dark-mode-toggle" href="#" data-bs-toggle="tooltip" title="Dark Mode / Light Mode" role="button">
+              <i class="bi bi-moon-stars-fill"></i>
+            </a>
+          </li>
 
-                    <!--begin::Notifications Dropdown Menu-->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" data-bs-toggle="dropdown" href="#">
-                            <i class="bi bi-bell-fill"></i>
-                            <span class="navbar-badge badge text-bg-warning">15</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
-                            <span class="dropdown-item dropdown-header">15 Notifications</span>
-                            <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item">
-                                <i class="bi bi-envelope me-2"></i> 4 new messages
-                                <span class="float-end text-secondary fs-7">3 mins</span>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item">
-                                <i class="bi bi-people-fill me-2"></i> 8 friend requests
-                                <span class="float-end text-secondary fs-7">12 hours</span>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item">
-                                <i class="bi bi-file-earmark-fill me-2"></i> 3 new reports
-                                <span class="float-end text-secondary fs-7">2 days</span>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item dropdown-footer"> See All Notifications </a>
-                        </div>
-                    </li>
-                    <!--end::Notifications Dropdown Menu-->
-
-                    <!--begin::User Menu Dropdown-->
-                    <li class="nav-item dropdown user-menu">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img src="./assets/images/sp.jpg" class="user-image rounded-circle shadow" alt="User Image">
-                            <!-- <span class="d-none d-md-inline">SP</span> -->
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end rounded-4 border-0">
-                            <!--begin::User Image-->
-                            <li class="user-header">
-                                <img src="./assets/images/sp.jpg" class="rounded-circle shadow" alt="User Image">
-                                <p>
-                                    Sumon Prodhan
-                                    <small>Member since Nov. 2026</small>
-                                </p>
-                            </li>
-                            <!--end::User Image-->
-                            <!--begin::Menu Footer-->
-                            <li class="user-footer d-flex flex-column gap-2">
-                                <a href="./my-profile.html" class="btn btn-outline-success">Profile</a>
-                                <a href="#" class="btn btn-outline-danger float-end">Sign out</a>
-                            </li>
-                            <!--end::Menu Footer-->
-                        </ul>
-                    </li>
-                    <!--end::User Menu Dropdown-->
-                </ul>
-                <!--end::End Navbar Links-->
+          <!--begin::Notifications Dropdown Menu-->
+          <li class="nav-item dropdown" data-bs-toggle="tooltip" title="Notifications">
+            <a class="nav-link" data-bs-toggle="dropdown" href="#">
+              <i class="bi bi-bell-fill"></i>
+              <span class="navbar-badge badge text-bg-warning">15</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+              <span class="dropdown-item dropdown-header">15 Notifications</span>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="bi bi-envelope me-2"></i> 4 new messages
+                <span class="float-end text-secondary fs-7">3 mins</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="bi bi-people-fill me-2"></i> 8 friend requests
+                <span class="float-end text-secondary fs-7">12 hours</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="bi bi-file-earmark-fill me-2"></i> 3 new reports
+                <span class="float-end text-secondary fs-7">2 days</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item dropdown-footer"> See All Notifications </a>
             </div>
-            <!--end::Container-->
-        </nav>
+          </li>
+          <!--end::Notifications Dropdown Menu-->
+
+          <!--begin::User Menu Dropdown-->
+          <li class="nav-item dropdown user-menu" data-bs-toggle="tooltip" title="Profile">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <img src="./assets/images/sp.jpg" class="user-image rounded-circle shadow" alt="User Image">
+              <!-- <span class="d-none d-md-inline">SP</span> -->
+            </a>
+            <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end rounded-4 border-0">
+              <!--begin::User Image-->
+              <li class="user-header">
+                <img src="./assets/images/sp.jpg" class="rounded-circle shadow" alt="User Image">
+                <p>
+                  Sumon Prodhan
+                  <small>Member since Nov. 2026</small>
+                </p>
+              </li>
+              <!--end::User Image-->
+              <!--begin::Menu Footer-->
+              <li class="user-footer d-flex flex-column gap-2">
+                <a href="./my-profile.html" class="btn btn-outline-success">Profile</a>
+                <a href="#" class="btn btn-outline-danger float-end">Sign out</a>
+              </li>
+              <!--end::Menu Footer-->
+            </ul>
+          </li>
+          <!--end::User Menu Dropdown-->
+        </ul>
+        <!--end::End Navbar Links-->
+      </div>
+      <!--end::Container-->
+    </nav>
         <!--end::Header-->
 
         <!--begin::Sidebar-->

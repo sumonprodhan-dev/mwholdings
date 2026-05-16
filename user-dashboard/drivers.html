@@ -2,29 +2,29 @@
 <html lang="en" data-bs-theme="dark">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MW Holdings</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./assets/vendor/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/vendor/css/adminlte.min.css">
-    <link rel="stylesheet" href="./assets/vendor/css/bs-icon/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="./assets/vendor/css/remix-icon/remixicon.css">
-    <link rel="stylesheet" href="./assets/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MW Holdings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/vendor/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/vendor/css/adminlte.min.css">
+  <link rel="stylesheet" href="./assets/vendor/css/bs-icon/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./assets/vendor/css/remix-icon/remixicon.css">
+  <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body class="layout-fixed sidebar-expand-lg bg-body-tertiary app-loaded" data-new-gr-c-s-check-loaded="14.1290.0"
-    data-gr-ext-installed="" cz-shortcut-listen="true">
-    <div class="skip-links"><a href="#main" class="skip-link">Skip to main content</a><a href="#navigation"
-            class="skip-link">Skip to navigation</a></div>
-    <!--begin::App Wrapper-->
-    <div class="app-wrapper">
-        <!--begin::Header-->
-        <nav class="app-header navbar navbar-expand shadow-sm" id="navigation" tabindex="-1">
+  data-gr-ext-installed="" cz-shortcut-listen="true">
+  <div class="skip-links"><a href="#main" class="skip-link">Skip to main content</a><a href="#navigation"
+      class="skip-link">Skip to navigation</a></div>
+  <!--begin::App Wrapper-->
+  <div class="app-wrapper">
+    <!--begin::Header-->
+    <nav class="app-header navbar navbar-expand shadow-sm" id="navigation" tabindex="-1">
       <!--begin::Container-->
       <div class="container-fluid">
         <!--begin::Start Navbar Links-->
@@ -36,7 +36,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/frontend/index.html" title="View Home">
+            <a class="nav-link" href="../index.html" data-bs-toggle="tooltip" title="View Home">
               <i class="bi bi-globe"></i>
             </a>
           </li>
@@ -64,13 +64,14 @@
           </li>
           <!--end::Navbar Search-->
           <li class="nav-item">
-            <a class="nav-link" id="dark-mode-toggle" href="#" role="button">
+            <a class="nav-link" id="dark-mode-toggle" href="#" data-bs-toggle="tooltip" title="Dark Mode / Light Mode"
+              role="button">
               <i class="bi bi-moon-stars-fill"></i>
             </a>
           </li>
 
           <!--begin::Notifications Dropdown Menu-->
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" data-bs-toggle="tooltip" title="Notifications">
             <a class="nav-link" data-bs-toggle="dropdown" href="#">
               <i class="bi bi-bell-fill"></i>
               <span class="navbar-badge badge text-bg-warning">15</span>
@@ -99,7 +100,7 @@
           <!--end::Notifications Dropdown Menu-->
 
           <!--begin::User Menu Dropdown-->
-          <li class="nav-item dropdown user-menu">
+          <li class="nav-item dropdown user-menu" data-bs-toggle="tooltip" title="Profile">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
               <img src="./assets/images/sp.jpg" class="user-image rounded-circle shadow" alt="User Image">
               <!-- <span class="d-none d-md-inline">SP</span> -->
@@ -360,186 +361,217 @@
       </div>
     </aside>
 
-        <main class="app-content p-0">
-            <div class="container-fluid pt-3">
-                <!-- Top Action Bar -->
-                <div class="d-flex flex-wrap align-items-center justify-content-between mb-3 gap-3">
-                    <div class="d-flex align-items-center gap-3 flex-grow-1">
-                        <!-- Search Bar -->
-                        <div class="search-box-custom" style="max-width: 250px; width: 100%;">
-                            <input type="text" class="form-control rounded-pill shadow-sm border-0 px-3 py-2"
-                                placeholder="Search drivers..."
-                                style="background: rgba(255,255,255,0.1); font-size: 0.9rem;">
-                        </div>
-
-                        <!-- Badge and Info -->
-                        <div class="d-flex align-items-center gap-2">
-                            <span class="badge rounded-pill border border-info text-orange px-3 py-2 fw-bold"
-                                style="background: transparent; color: var(--primary-color);">
-                                CSA: C8888312
-                            </span>
-                            <small class="text-secondary fw-bold">43 drivers</small>
-                        </div>
-                    </div>
-
-                    <!-- Buttons -->
-                    <div class="d-flex align-items-center gap-2">
-                        <button
-                            class="btn btn-light rounded-pill px-4 shadow-sm fw-bold d-flex align-items-center gap-2"
-                            style="font-size: 0.85rem; border: 1px solid var(--primary-color);">
-                            <i class="bi bi-download"></i> Export
-                        </button>
-                        <button class="btn rounded-pill px-4 shadow-sm fw-bold border-0"
-                            style="background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); font-size: 0.85rem;">
-                            + Add Driver
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Navigation Tabs -->
-                <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
-                    <div class="card-body p-1" style="background: rgba(255,255,255,0.02);">
-                        <ul class="nav nav-pills custom-nav-pills gap-1">
-                            <li class="nav-item">
-                                <a class="nav-link active fw-bold" href="#">Roster</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fw-bold text-secondary" href="#">Fleet Performance</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fw-bold text-secondary" href="#">Route Optimizer</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fw-bold text-secondary" href="#">GC Upload</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Driver Card -->
-                <div class="card shadow-sm rounded-4 overflow-hidden hover-item mt-4" style="max-width: 500px;">
-                    <div class="card-body p-4">
-                        <!-- Header Section -->
-                        <div class="d-flex justify-content-between align-items-start mb-1">
-                            <h4 class="fw-bold mb-0 text-uppercase" style="letter-spacing: 0.5px;">Pogue, Hunter
-                                Braxt...</h4>
-                            <div class="d-flex gap-2">
-                                <button class="btn btn-outline-info btn-sm rounded-pill px-3">Pay</button>
-                                <button class="btn btn-outline-warning btn-sm rounded-pill px-3">Edit</button>
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <span class="badge rounded-pill px-3 py-2 mb-2"
-                                style="background-color: #e8f5e9; color: #21c45d;">
-                                ● Active
-                            </span>
-                            <p class="text-secondary small mb-0">C8888312</p>
-                        </div>
-
-                        <!-- Top 3 Stats Grid -->
-                        <div class="row g-2 mb-2">
-                            <!-- Efficiency -->
-                            <div class="col-4">
-                                <div class="card h-100 border-0 rounded-3 text-center p-2 stat-box"
-                                    style="background-color: #f8f9fa; border-top: 4px solid #dc3545 !important;">
-                                    <small class="text-uppercase text-secondary fw-bold"
-                                        style="font-size: 0.65rem;">Efficiency</small>
-                                    <h3 class="fw-bold mb-0" style="color: #dc3545;">2.7</h3>
-                                    <small class="text-muted d-block" style="font-size: 0.7rem;">stops/hr</small>
-                                    <small class="text-success fw-bold" style="font-size: 0.65rem;">↑ fleet avg
-                                        2.7</small>
-                                    <div class="mt-2 p-1 rounded-2"
-                                        style="background-color: #fee2e2; color: #b91c1c; font-size: 0.65rem;">
-                                        ⚠️ Very Hard Route
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Quality -->
-                            <div class="col-4">
-                                <div class="card h-100 border-0 rounded-3 text-center p-2 stat-box"
-                                    style="background-color: #f8f9fa; border-top: 4px solid #21c45d !important;">
-                                    <small class="text-uppercase text-secondary fw-bold"
-                                        style="font-size: 0.65rem;">Quality (ILS)</small>
-                                    <h3 class="fw-bold mb-0 text-success">98.7%</h3>
-                                    <small class="text-muted d-block" style="font-size: 0.7rem;">driver +
-                                        terminal</small>
-                                    <small class="text-success fw-bold" style="font-size: 0.65rem;">↑ fleet avg
-                                        98.7%</small>
-                                </div>
-                            </div>
-                            <!-- Financial -->
-                            <div class="col-4">
-                                <div class="card h-100 border-0 rounded-3 text-center p-2 stat-box"
-                                    style="background-color: #f8f9fa; border-top: 4px solid #6c757d !important;">
-                                    <small class="text-uppercase text-secondary fw-bold"
-                                        style="font-size: 0.65rem;">Financial</small>
-                                    <h3 class="fw-bold my-2 text-secondary">—</h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Bottom 3 Stats Grid -->
-                        <div class="row g-2 mb-4">
-                            <!-- Incident Risk -->
-                            <div class="col-4">
-                                <div class="card h-100 border-0 rounded-3 text-center p-2 stat-box"
-                                    style="background-color: #f8f9fa; border-top: 4px solid #21c45d !important;">
-                                    <small class="text-uppercase text-secondary fw-bold" style="font-size: 0.65rem;">🚗
-                                        Incident Risk</small>
-                                    <h3 class="fw-bold mb-0 text-success">0%</h3>
-                                    <small class="text-success fw-bold" style="font-size: 0.7rem;">Clean</small>
-                                </div>
-                            </div>
-                            <!-- Attendance -->
-                            <div class="col-4">
-                                <div class="card h-100 border-0 rounded-3 text-center p-2 stat-box"
-                                    style="background-color: #f8f9fa; border-top: 4px solid #21c45d !important;">
-                                    <small class="text-uppercase text-secondary fw-bold" style="font-size: 0.65rem;">📋
-                                        Attendance</small>
-                                    <h3 class="fw-bold mb-0 text-success">100%</h3>
-                                    <small class="text-success fw-bold" style="font-size: 0.7rem;">Reliable</small>
-                                </div>
-                            </div>
-                            <!-- Employee Grade -->
-                            <div class="col-4">
-                                <div class="card h-100 border-0 rounded-3 text-center p-2 stat-box"
-                                    style="background-color: #f8f9fa; border-top: 4px solid #0d6efd !important;">
-                                    <small class="text-uppercase text-secondary fw-bold" style="font-size: 0.65rem;">🎓
-                                        Employee Grade</small>
-                                    <h3 class="fw-bold mb-0 text-primary">B</h3>
-                                    <small class="text-muted d-block" style="font-size: 0.7rem;">82.7/100</small>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Alerts Section -->
-                        <div class="d-flex flex-column gap-2">
-                            <div class="alert alert-danger border-0 rounded-3 p-2 mb-0 d-flex align-items-center stat-box"
-                                style="background-color: #fff1f2; color: #e11d48; font-size: 0.85rem;">
-                                🔍 <strong class="ms-2">34 Code 85 YTD ⚠️ spike this week</strong>
-                            </div>
-                            <div class="alert alert-danger border-0 rounded-3 p-2 mb-0 d-flex align-items-start stat-box"
-                                style="background-color: #fff1f2; color: #e11d48; font-size: 0.75rem;">
-                                <span class="me-2">🔍</span>
-                                <span>16 Code 85s this week — unusual spike. Could be bad addresses on the route OR
-                                    worth investigating...</span>
-                            </div>
-                            <div class="alert alert-warning border-0 rounded-3 p-2 mb-0 d-flex align-items-start stat-box"
-                                style="background-color: #fffbeb; color: #d97706; font-size: 0.75rem;">
-                                <span class="me-2">⚡</span>
-                                <span>2.7 stops/hr — below benchmark, but route is rated "Very Hard" (⚠️ 25.1). Low SPH
-                                    is expected on difficu...</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <main class="app-content p-0">
+      <div class="container-fluid pt-3">
+        <!-- Top Action Bar -->
+        <div class="d-flex flex-wrap align-items-center justify-content-between mb-3 gap-3">
+          <div class="d-flex align-items-center gap-3 flex-grow-1">
+            <!-- Search Bar -->
+            <div class="search-box-custom" style="max-width: 250px; width: 100%;">
+              <input type="text" class="form-control rounded-pill shadow-sm border-0 px-3 py-2"
+                placeholder="Search drivers..." style="background: rgba(255,255,255,0.1); font-size: 0.9rem;">
             </div>
-        </main>
-    </div>
-    <script src="./assets/vendor/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/vendor/js/adminlte.min.js"></script>
-    <script src="./assets/app.js"></script>
+
+            <!-- Badge and Info -->
+            <div class="d-flex align-items-center gap-2">
+              <span class="badge rounded-pill border border-info text-orange px-3 py-2 fw-bold"
+                style="background: transparent; color: var(--primary-color);">
+                CSA: C8888312
+              </span>
+              <small class="text-secondary fw-bold">43 drivers</small>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-light rounded-pill px-4 shadow-sm fw-bold d-flex align-items-center gap-2"
+              style="font-size: 0.85rem; border: 1px solid var(--primary-color);">
+              <i class="bi bi-download"></i> Export
+            </button>
+            <button class="btn rounded-pill px-4 shadow-sm fw-bold border-0"
+              style="background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); font-size: 0.85rem;">
+              + Add Driver
+            </button>
+          </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+          <div class="card-body p-1" style="background: rgba(255,255,255,0.02);">
+            <ul class="nav nav-pills custom-nav-pills gap-1" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link fw-bold active text-secondary" id="pills-medals-tab" data-bs-toggle="pill"
+                  href="#pills-medals" role="tab" aria-controls="pills-medals" aria-selected="true">
+                  Roster
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link fw-bold text-secondary" id="pills-resources-tab" data-bs-toggle="pill"
+                  href="#pills-resources" role="tab" aria-controls="pills-resources" aria-selected="false">
+                  Fleet Performance
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link fw-bold text-secondary" id="pills-driver-tab" data-bs-toggle="pill"
+                  href="#pills-driver" role="tab" aria-controls="pills-driver" aria-selected="false">
+                  Route Optimizer
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link fw-bold text-secondary" id="pills-reports-tab" data-bs-toggle="pill"
+                  href="#pills-reports" role="tab" aria-controls="pills-reports" aria-selected="false">
+                  GC Upload
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tab-content" id="pills-tabContent">
+          <!-- P&D Medals Content (Weekly Grid Calendar jeta ektu age banalam) -->
+          <div class="tab-pane fade show active" id="pills-medals" role="tabpanel" aria-labelledby="pills-medals-tab">
+            <!-- Driver Card -->
+            <div class="card shadow-sm rounded-4 overflow-hidden hover-item" style="max-width: 500px;">
+              <div class="card-body p-4">
+                <!-- Header Section -->
+                <div class="d-flex justify-content-between align-items-start mb-1">
+                  <h4 class="fw-bold mb-0 text-uppercase" style="letter-spacing: 0.5px;">Pogue, Hunter
+                    Braxt...</h4>
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-outline-info btn-sm rounded-pill px-3">Pay</button>
+                    <button class="btn btn-outline-warning btn-sm rounded-pill px-3">Edit</button>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <span class="badge rounded-pill px-3 py-2 mb-2" style="background-color: #e8f5e9; color: #21c45d;">
+                    ● Active
+                  </span>
+                  <p class="text-secondary small mb-0">C8888312</p>
+                </div>
+
+                <!-- Top 3 Stats Grid -->
+                <div class="row g-2 mb-2">
+                  <!-- Efficiency -->
+                  <div class="col-4">
+                    <div class="card h-100 border-0 rounded-3 text-center p-2 stat-box"
+                      style="background-color: #f8f9fa; border-top: 4px solid #dc3545 !important;">
+                      <small class="text-uppercase text-secondary fw-bold"
+                        style="font-size: 0.65rem;">Efficiency</small>
+                      <h3 class="fw-bold mb-0" style="color: #dc3545;">2.7</h3>
+                      <small class="text-muted d-block" style="font-size: 0.7rem;">stops/hr</small>
+                      <small class="text-success fw-bold" style="font-size: 0.65rem;">↑ fleet avg
+                        2.7</small>
+                      <div class="mt-2 p-1 rounded-2"
+                        style="background-color: #fee2e2; color: #b91c1c; font-size: 0.65rem;">
+                        ⚠️ Very Hard Route
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Quality -->
+                  <div class="col-4">
+                    <div class="card h-100 border-0 rounded-3 text-center p-2 stat-box"
+                      style="background-color: #f8f9fa; border-top: 4px solid #21c45d !important;">
+                      <small class="text-uppercase text-secondary fw-bold" style="font-size: 0.65rem;">Quality
+                        (ILS)</small>
+                      <h3 class="fw-bold mb-0 text-success">98.7%</h3>
+                      <small class="text-muted d-block" style="font-size: 0.7rem;">driver +
+                        terminal</small>
+                      <small class="text-success fw-bold" style="font-size: 0.65rem;">↑ fleet avg
+                        98.7%</small>
+                    </div>
+                  </div>
+                  <!-- Financial -->
+                  <div class="col-4">
+                    <div class="card h-100 border-0 rounded-3 text-center p-2 stat-box"
+                      style="background-color: #f8f9fa; border-top: 4px solid #6c757d !important;">
+                      <small class="text-uppercase text-secondary fw-bold" style="font-size: 0.65rem;">Financial</small>
+                      <h3 class="fw-bold my-2 text-secondary">—</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bottom 3 Stats Grid -->
+                <div class="row g-2 mb-4">
+                  <!-- Incident Risk -->
+                  <div class="col-4">
+                    <div class="card h-100 border-0 rounded-3 text-center p-2 stat-box"
+                      style="background-color: #f8f9fa; border-top: 4px solid #21c45d !important;">
+                      <small class="text-uppercase text-secondary fw-bold" style="font-size: 0.65rem;">🚗
+                        Incident Risk</small>
+                      <h3 class="fw-bold mb-0 text-success">0%</h3>
+                      <small class="text-success fw-bold" style="font-size: 0.7rem;">Clean</small>
+                    </div>
+                  </div>
+                  <!-- Attendance -->
+                  <div class="col-4">
+                    <div class="card h-100 border-0 rounded-3 text-center p-2 stat-box"
+                      style="background-color: #f8f9fa; border-top: 4px solid #21c45d !important;">
+                      <small class="text-uppercase text-secondary fw-bold" style="font-size: 0.65rem;">📋
+                        Attendance</small>
+                      <h3 class="fw-bold mb-0 text-success">100%</h3>
+                      <small class="text-success fw-bold" style="font-size: 0.7rem;">Reliable</small>
+                    </div>
+                  </div>
+                  <!-- Employee Grade -->
+                  <div class="col-4">
+                    <div class="card h-100 border-0 rounded-3 text-center p-2 stat-box"
+                      style="background-color: #f8f9fa; border-top: 4px solid #0d6efd !important;">
+                      <small class="text-uppercase text-secondary fw-bold" style="font-size: 0.65rem;">🎓
+                        Employee Grade</small>
+                      <h3 class="fw-bold mb-0 text-primary">B</h3>
+                      <small class="text-muted d-block" style="font-size: 0.7rem;">82.7/100</small>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Alerts Section -->
+                <div class="d-flex flex-column gap-2">
+                  <div class="alert alert-danger border-0 rounded-3 p-2 mb-0 d-flex align-items-center stat-box"
+                    style="background-color: #fff1f2; color: #e11d48; font-size: 0.85rem;">
+                    🔍 <strong class="ms-2">34 Code 85 YTD ⚠️ spike this week</strong>
+                  </div>
+                  <div class="alert alert-danger border-0 rounded-3 p-2 mb-0 d-flex align-items-start stat-box"
+                    style="background-color: #fff1f2; color: #e11d48; font-size: 0.75rem;">
+                    <span class="me-2">🔍</span>
+                    <span>16 Code 85s this week — unusual spike. Could be bad addresses on the route OR
+                      worth investigating...</span>
+                  </div>
+                  <div class="alert alert-warning border-0 rounded-3 p-2 mb-0 d-flex align-items-start stat-box"
+                    style="background-color: #fffbeb; color: #d97706; font-size: 0.75rem;">
+                    <span class="me-2">⚡</span>
+                    <span>2.7 stops/hr — below benchmark, but route is rated "Very Hard" (⚠️ 25.1). Low SPH
+                      is expected on difficu...</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resources Overview Content -->
+          <div class="tab-pane fade text-light" id="pills-resources" role="tabpanel"
+            aria-labelledby="pills-resources-tab">
+            <h5>Fleet Performance Content Goes Here...</h5>
+          </div>
+
+          <!-- Driver Analysis Content -->
+          <div class="tab-pane fade text-light" id="pills-driver" role="tabpanel" aria-labelledby="pills-driver-tab">
+            <h5>Route Optimizer Content Goes Here...</h5>
+          </div>
+
+          <!-- Reports Cards Content -->
+          <div class="tab-pane fade text-light" id="pills-reports" role="tabpanel" aria-labelledby="pills-reports-tab">
+            <h5>GC Upload</h5>
+          </div>
+        </div>
+
+
+      </div>
+    </main>
+  </div>
+  <script src="./assets/vendor/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/vendor/js/adminlte.min.js"></script>
+  <script src="./assets/app.js"></script>
 </body>
 
 </html>
