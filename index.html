@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>MW Holdings</title>
+    <link rel="icon" href="./assets/img/fab-icon.ico" type="image/x-icon">
+    <meta name="description"
+        content="A comprehensive consulting platform for renewable energy and electric system infrastructure.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Owl Carousel CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./assets/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-black">
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
+                <div class="logo-box">
+                    <i class="bi bi-lightning-charge-fill"></i>
+                </div>
+                <span class="brand-text fw-bold fs-4">
+                    <span class="text-white">MW</span><span class="text-info">Holdings</span>
+                </span>
+            </a>
+
+            <!-- Mobile Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navMenu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Offcanvas (Right to Left) -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="navMenu">
+                <div class="offcanvas-header d-lg-none border-bottom border-muted m-0">
+                    <div class="offcanvas-title d-flex align-items-center gap-2">
+                        <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
+                            <div class="logo-box">
+                                <i class="bi bi-lightning-charge-fill"></i>
+                            </div>
+                            <span class="brand-text fw-bold fs-4">
+                                <span class="text-white">MW</span><span class="text-info">Holdings</span>
+                            </span>
+                        </a>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white shadow-none"
+                        data-bs-dismiss="offcanvas"></button>
+                </div>
+
+                <div class="offcanvas-body d-lg-flex justify-content-center align-items-center">
+                    <!-- Center Menu Items -->
+                    <ul class="navbar-nav mx-auto gap-1">
+                        <li class="nav-item"><a class="nav-link-custom active" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link-custom active" href="./index.html#features">Features</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link-custom" href="./index.html#how-it-works">How It
+                                Works</a></li>
+                        <li class="nav-item"><a class="nav-link-custom"
+                                href="./index.html#testimonials">Testimonials</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link-custom" href="./index.html#pricing">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link-custom" href="./contact.html">Contact</a></li>
+                    </ul>
+
+                    <!-- Right Side Buttons -->
+                    <div class="nav-btns d-flex flex-column flex-lg-row align-items-center gap-2 ms-lg-3">
+                        <a class="text-decoration-none" href="./login.html">
+                            <button class="btn btn-outline-info rounded px-4">Sign In</button>
+                        </a>
+                        <!-- <a class="text-decoration-none" href="/user-dashboard/index.html">
+                            <button class="btn btn-info rounded px-4">Get Started</button>
+                        </a> -->
+                        <a class="text-decoration-none" href="/user-dashboard/index.html">
+                            <button class="btn btn-info rounded px-4">Dashboard</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero-section text-center position-relative">
+            <div class="center-glow"></div>
+            <div class="container position-relative z-index-1">
+                <!-- Main Title -->
+                <div class="badge-pill" data-aos="fade-up">
+                    <span
+                        style="width: 8px; height: 8px; background: var(--primary-color); border-radius: 50%; display: inline-block;"></span>
+                    <span>
+                        Fleet Intelligence Platform for 3PLs
+                    </span>
+                </div>
+                <h1 class="hero-title text-white" data-aos="fade-up" data-aos-delay="100">
+                    Deliver Smarter, <br>
+                    <span>Not Harder.</span>
+                </h1>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    The all-in-one fleet & delivery management platform built for third-party logistics providers.
+                    Real-time tracking, intelligent dispatch, and actionable analytics — all in one place.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="d-flex flex-column flex-lg-row justify-content-center gap-3 gap-lg-4 mb-5"
+                    data-aos="fade-up">
+                    <button class="btn btn-demo rounded-3 w-100 w-lg-auto px-lg-4">
+                        Get a Free Demo <i class="bi bi-arrow-right"></i>
+                    </button>
+
+                    <button class="btn btn-outline-info rounded-3 fw-bold w-100 w-lg-auto px-lg-4">
+                        <i class="bi bi-play-circle"></i> See How It Works
+                    </button>
+                </div>
+
+                <!-- Horizontal Stats -->
+                <div class="row g-4 justify-content-center mt-5">
+                    <div class="col-6 col-md-2">
+                        <div class="inner-stats-card h-100" data-aos="fade-up" data-aos-delay="300">
+                            <div class="stats-number">98.6%</div>
+                            <div class="feature-desc">On-time delivery rate</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <div class="inner-stats-card h-100" data-aos="fade-up" data-aos-delay="300">
+                            <div class="stats-number">3.2x</div>
+                            <div class="feature-desc">Faster dispatch</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <div class="inner-stats-card h-100" data-aos="fade-up" data-aos-delay="300">
+                            <div class="stats-number">40%</div>
+                            <div class="feature-desc">Fuel cost savings</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <div class="inner-stats-card h-100" data-aos="fade-up" data-aos-delay="300">
+                            <div class="stats-number">500+</div>
+                            <div class="feature-desc">Fleet operators</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Mockup Preview -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="dashboard-mockup" data-aos="fade-up">
+                            <div class="mockup-header">
+                                <div class="dots">
+                                    <span style="background: #ff5f56;"></span>
+                                    <span style="background: #ffbd2e;"></span>
+                                    <span style="background: #27c93f;"></span>
+                                </div>
+                                <small class="feature-desc">Live Fleet Dashboard — mwholdings.com</small>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span
+                                        style="width: 8px; height: 8px; background: var(--primary-color); border-radius: 50%;"></span>
+                                    <small class="feature-desc">Live</small>
+                                </div>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="inner-stats-card">
+                                        <i class="bi bi-truck text-info"></i>
+                                        <div class="inner-number">142</div>
+                                        <small class="feature-desc">Active Vehicles</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="inner-stats-card">
+                                        <i class="bi bi-geo-alt text-warning"></i>
+                                        <div class="inner-number text-warning">89</div>
+                                        <small class="feature-desc">In Transit</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="inner-stats-card">
+                                        <i class="bi bi-check2-circle text-success"></i>
+                                        <div class="inner-number text-success">317</div>
+                                        <small class="feature-desc">Completed Today</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="map-placeholder position-relative overflow-hidden mt-4">
+                                <div class="dot dot-1"></div>
+                                <div class="dot dot-2"></div>
+                                <div class="dot dot-3"></div>
+                                <div class="dot dot-4"></div>
+                                <div class="dot dot-5"></div>
+                                <div class="dot dot-6"></div>
+
+                                <div class="z-1 position-relative">
+                                    <i class="bi bi-geo-alt-fill me-2 text-info fs-4"></i>
+                                    <span class="feature-desc fw-medium">
+                                        Interactive Route Map
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section id="features">
+            <div class="container text-center mt-5 py-5">
+                <!-- Header -->
+                <div class="badge-pill" data-aos="fade-up">Platform Features</div>
+                <h2 class="section-title text-white scale-item" data-aos="fade-up" data-aos-delay="100">Everything your
+                    3PL needs</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    Purpose-built for third-party logistics providers who need power, speed, and reliability at scale.
+                </p>
+
+                <!-- Grid -->
+                <div class="row g-4 text-start">
+                    <!-- Fleet Management -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-card hover-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="icon-box bg-blue"><i class="bi bi-truck"></i></div>
+                            <h5 class="feature-title">Fleet Management</h5>
+                            <p class="feature-desc">Manage your entire fleet from a single dashboard. Track vehicle
+                                health,
+                                assign loads, and monitor driver activity in real time.</p>
+                        </div>
+                    </div>
+
+                    <!-- Smart Route Planning -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-card hover-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="icon-box bg-purple scale-item"><i class="bi bi-bezier2"></i></div>
+                            <h5 class="feature-title">Smart Route Planning</h5>
+                            <p class="feature-desc">Manually assign or auto-optimize delivery routes. Reduce mileage,
+                                cut
+                                fuel costs, and improve on-time performance.</p>
+                        </div>
+                    </div>
+
+                    <!-- Live Delivery Tracking -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-card hover-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="icon-box bg-yellow scale-item"><i class="bi bi-geo-alt"></i></div>
+                            <h5 class="feature-title">Live Delivery Tracking</h5>
+                            <p class="feature-desc">Real-time GPS visibility for every shipment. Share live ETAs with
+                                customers and get notified on every status change.</p>
+                        </div>
+                    </div>
+
+                    <!-- Analytics & Reports -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-card hover-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="icon-box bg-green scale-item"><i class="bi bi-bar-chart"></i></div>
+                            <h5 class="feature-title">Analytics & Reports</h5>
+                            <p class="feature-desc">Deep-dive into performance metrics — on-time rates, cost per mile,
+                                driver scores, and custom KPI dashboards.</p>
+                        </div>
+                    </div>
+
+                    <!-- Alerts & Notifications -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-card hover-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="icon-box bg-orange scale-item"><i class="bi bi-bell"></i></div>
+                            <h5 class="feature-title">Alerts & Notifications</h5>
+                            <p class="feature-desc">Automated alerts for delays, missed stops, driver idling, and route
+                                deviations. Stay ahead of every issue.</p>
+                        </div>
+                    </div>
+
+                    <!-- Compliance & Safety -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-card hover-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="icon-box bg-red scale-item"><i class="bi bi-shield-check"></i></div>
+                            <h5 class="feature-title">Compliance & Safety</h5>
+                            <p class="feature-desc">Built-in ELD compliance, HOS tracking, and safety scorecards to keep
+                                your fleet audit-ready at all times.</p>
+                        </div>
+                    </div>
+
+                    <!-- Proof of Delivery -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-card hover-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="icon-box bg-pink scale-item"><i class="bi bi-clock-history"></i></div>
+                            <h5 class="feature-title">Proof of Delivery</h5>
+                            <p class="feature-desc">Capture electronic signatures, photos, and timestamps at every stop.
+                                Dispute-proof your deliveries automatically.</p>
+                        </div>
+                    </div>
+
+                    <!-- Instant Dispatch -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-card hover-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="icon-box bg-cyan scale-item"><i class="bi bi-lightning-charge"></i></div>
+                            <h5 class="feature-title">Instant Dispatch</h5>
+                            <p class="feature-desc">Dispatch drivers instantly via mobile app. No phone calls, no
+                                paperwork
+                                — just one-tap job assignment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section id="how-it-works">
+            <div class="container text-center py-5 mt-5">
+                <!-- Header -->
+                <div class="badge-pill" data-aos="fade-up">How It Works</div>
+                <h2 class="section-title text-white mb-5" data-aos="fade-up" data-aos-delay="100">From order to delivery
+                    in 4 steps</h2>
+
+                <!-- Steps Grid -->
+                <div class="row g-4 text-start">
+                    <!-- Step 01 -->
+                    <div class="col-md-6 col-lg-3 step-col">
+                        <div class="step-card hover-item" data-aos="fade-right" data-aos-delay="100">
+                            <div class="step-number">01</div>
+                            <div class="icon-box scale-item">
+                                <i class="bi bi-clipboard-check"></i>
+                            </div>
+                            <h4 class="feature-title">Create Shipment Orders</h4>
+                            <p class="feature-desc mb-3">
+                                Input pickup and delivery details, cargo specs, and priority levels. Import bulk orders
+                                via
+                                CSV or API integration.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 02 -->
+                    <div class="col-md-6 col-lg-3 step-col">
+                        <div class="step-card hover-item" data-aos="fade-right" data-aos-delay="200">
+                            <div class="step-number">02</div>
+                            <div class="icon-box scale-item">
+                                <i class="bi bi-person-check"></i>
+                            </div>
+                            <h4 class="feature-title">Assign Drivers & Routes</h4>
+                            <p class="feature-desc mb-3">
+                                Dispatchers assign the right driver to each order manually or let the system suggest the
+                                optimal assignment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 03 -->
+                    <div class="col-md-6 col-lg-3 step-col">
+                        <div class="step-card hover-item" data-aos="fade-right" data-aos-delay="300">
+                            <div class="step-number">03</div>
+                            <div class="icon-box scale-item">
+                                <i class="bi bi-send"></i>
+                            </div>
+                            <h4 class="feature-title">Track Live Progress</h4>
+                            <p class="feature-desc mb-3">
+                                Monitor every vehicle on a live map. Get real-time ETAs and instant alerts for delays or
+                                deviations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 04 -->
+                    <div class="col-md-6 col-lg-3 step-col">
+                        <div class="step-card hover-item" data-aos="fade-right" data-aos-delay="400">
+                            <div class="step-number">04</div>
+                            <div class="icon-box scale-item">
+                                <i class="bi bi-check-circle"></i>
+                            </div>
+                            <h4 class="feature-title">Confirm & Analyze</h4>
+                            <p class="feature-desc mb-3">
+                                Capture proof of delivery, close jobs, and analyze performance data to continuously
+                                improve
+                                operations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials">
+            <div class="container py-5 mt-5">
+                <div class="text-center mb-5">
+                    <div class="badge-pill fw-bold" data-aos="fade-up">Customer Stories</div>
+                    <h2 class="fw-bold mb-3 text-white" data-aos="fade-up" data-aos-delay="100">Trusted by leading 3PLs
+                    </h2>
+                </div>
+
+                <!-- Swiper Container -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide" data-aos="fade-up">
+                            <div class="testimonial-card">
+                                <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text mb-0">"MW Holdings cut our dispatch time by 60%. What used to
+                                    take an
+                                    hour now takes minutes. Our drivers love the mobile app."</p>
+                                <div class="user-info">
+                                    <div class="avatar"
+                                        style="background: #0369a1; color: #7dd3fc; border-radius: 50%;">CM
+                                    </div>
+                                    <div>
+                                        <h6 class="m-0 text-white">Carlos M.</h6><small class="text-secondary">VP of
+                                            Operations</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide" data-aos="fade-up">
+                            <div class="testimonial-card">
+                                <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">"The real-time tracking and proof of delivery features
+                                    eliminated all our customer disputes. Game changer for our operation."</p>
+                                <div class="user-info">
+                                    <div class="avatar" style="background: #581c87; color: #d8b4fe;">SL</div>
+                                    <div>
+                                        <h6 class="m-0 text-white">Sarah L.</h6><small class="text-secondary">Fleet
+                                            Manager</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide" data-aos="fade-up">
+                            <div class="testimonial-card">
+                                <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">"We scaled from 50 to 200 vehicles without adding dispatch
+                                    staff. The analytics dashboard alone paid for itself."</p>
+                                <div class="user-info">
+                                    <div class="avatar" style="background: #064e3b; color: #6ee7b7;">JT</div>
+                                    <div>
+                                        <h6 class="m-0 text-white">James T.</h6><small class="text-secondary">CEO,
+                                            IronHaul</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide" data-aos="fade-up">
+                            <div class="testimonial-card">
+                                <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">"The minimalist design and clean UI make managing orders
+                                    incredibly fast for our entire team."</p>
+                                <div class="user-info">
+                                    <div class="avatar" style="background: #00d1ff; color: #050b1a;">AZ</div>
+                                    <div>
+                                        <h6 class="m-0 text-white">Anet Zone</h6><small class="text-secondary">Project
+                                            Lead</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <!-- <section id="pricing" class="py-5 ">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <div class="badge-pill fw-bold" data-aos="fade-up">Our Pricing</div>
+                    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Flexible plans for every fleet
+                    </h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">Choose the perfect plan to scale
+                        your logistics operations.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="pricing-card" data-aos="fade-up">
+                            <div class="plan-name">Free</div>
+                            <div class="plan-price">$0<span>/mo</span></div>
+                            <ul class="feature-list">
+                                <li><i class="bi bi-check2"></i> Up to 5 vehicles</li>
+                                <li><i class="bi bi-check2"></i> Basic tracking</li>
+                                <li><i class="bi bi-check2"></i> Community support</li>
+                                <li><i class="bi bi-check2"></i> Mobile app access</li>
+                            </ul>
+                            <button class="btn btn-pricing">Get Started</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="plan-name">Basic</div>
+                            <div class="plan-price">$49<span>/mo</span></div>
+                            <ul class="feature-list">
+                                <li><i class="bi bi-check2"></i> Up to 20 vehicles</li>
+                                <li><i class="bi bi-check2"></i> Real-time GPS</li>
+                                <li><i class="bi bi-check2"></i> Email support</li>
+                                <li><i class="bi bi-check2"></i> Basic analytics</li>
+                            </ul>
+                            <button class="btn btn-pricing">Choose Basic</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+                            <div class="featured-badge">Most Popular</div>
+                            <div class="plan-name text-info">Standard</div>
+                            <div class="plan-price">$99<span>/mo</span></div>
+                            <ul class="feature-list">
+                                <li><i class="bi bi-check2"></i> Up to 100 vehicles</li>
+                                <li><i class="bi bi-check2"></i> Advanced dispatch</li>
+                                <li><i class="bi bi-check2"></i> Priority support</li>
+                                <li><i class="bi bi-check2"></i> Custom reporting</li>
+                            </ul>
+                            <button class="btn btn-pricing">Choose Standard</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="pricing-card">
+                            <div class="plan-name">Professional</div>
+                            <div class="plan-price">$199<span>/mo</span></div>
+                            <ul class="feature-list">
+                                <li><i class="bi bi-check2"></i> Unlimited vehicles</li>
+                                <li><i class="bi bi-check2"></i> API integration</li>
+                                <li><i class="bi bi-check2"></i> Dedicated manager</li>
+                                <li><i class="bi bi-check2"></i> Custom branding</li>
+                            </ul>
+                            <button class="btn btn-pricing">Go Professional</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+
+        <section class="py-5 mt-4" id="pricing">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <div class="badge-pill fw-bold" data-aos="fade-up">Our Pricing</div>
+                    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Tailored to your fleet</h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">We don't believe in
+                        one-size-fits-all pricing. Every 3PL is different — let's build a plan that fits your exact
+                        operation.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="custom-pricing-card text-center" data-aos="fade-up">
+                            <h2 class="section-title">Custom Pricing</h2>
+                            <p class="section-subtitle">Built around your fleet size, volume & requirements</p>
+
+                            <div class="row text-start px-md-5">
+                                <!-- Left Column -->
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled pricing-features">
+                                        <li><i class="bi bi-check-circle-fill"></i> Unlimited shipment orders</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Manual & assisted dispatch</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Proof of delivery (ePOD)</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Analytics & custom reports</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> API & integrations</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> SLA-backed uptime guarantee</li>
+                                    </ul>
+                                </div>
+                                <!-- Right Column -->
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled pricing-features">
+                                        <li><i class="bi bi-check-circle-fill"></i> Live GPS fleet tracking</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Route optimization engine</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Driver mobile app (iOS & Android)
+                                        </li>
+                                        <li><i class="bi bi-check-circle-fill"></i> ELD & compliance tools</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Dedicated account manager</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> White-label branding options</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="mt-5">
+                                <button class="btn btn-quote px-5 py-3 rounded-3 fw-bold">
+                                    Get Your Custom Quote <i class="bi bi-arrow-right ms-2"></i>
+                                </button>
+                                <p class="feature-desc mt-3">No credit card required. Response within 24 hours.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== FAQ ===== -->
+        <section class="py-5 mt-4">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <div class="badge-pill fw-bold" data-aos="fade-up">FAQ's</div>
+                    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Common Questions</h2>
+                    <p class="section-subtitle mb-0" data-aos="fade-up" data-aos-delay="200">Everything you need to know
+                        about the platform.</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="accordion accordion-flush" id="faqAccordion">
+                            <!-- FAQ Item 1 -->
+                            <div class="accordion-item mb-3 border rounded" data-aos="fade-up">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-semibold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        How secure is my fleet data?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted">
+                                        Your data is encrypted and stored using industry-standard protocols. We
+                                        prioritize your privacy and business security.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 2 -->
+                            <div class="accordion-item mb-3 border rounded" data-aos="fade-up" data-aos-delay="100">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-semibold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        Can I change my plan later?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted">
+                                        Yes, you can upgrade or downgrade your subscription at any time from your
+                                        dashboard settings.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="row gy-4">
+                <!-- Left Side: Logo and Contact -->
+                <div class="col-lg-7">
+                    <a class="navbar-brand d-flex align-items-center gap-2 mb-3" href="./index.html">
+                        <div class="logo-box">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                        </div>
+                        <span class="brand-text fw-bold fs-4">
+                            <span class="text-white">MW</span><span class="text-info">Holdings</span>
+                        </span>
+                    </a>
+                    <p class="mb-4" style="max-width: 400px;">
+                        The fleet & delivery management platform built exclusively for third-party logistics providers.
+                        Move faster, smarter, and more profitably.
+                    </p>
+                    <ul class="contact-info">
+                        <li><i class="bi bi-envelope"></i> contact@mwholdings.com</li>
+                        <li><i class="bi bi-telephone"></i> +1 (800) MWH-FLEET</li>
+                        <li><i class="bi bi-geo-alt"></i> mwholdings.com</li>
+                    </ul>
+                </div>
+
+                <!-- Right Side: Newsletter -->
+                <div class="col-lg-5">
+                    <h5 class="footer-heading">Stay in the loop</h5>
+                    <p class="mb-4">Get the latest updates on fleet tech, logistics insights, and platform news —
+                        delivered to your inbox.</p>
+
+                    <form class="newsletter-form">
+                        <div class="d-flex flex-column flex-sm-row gap-3">
+                            <input type="email" class="form-control" placeholder="your@email.com" required>
+                            <button class="btn btn-subscribe" type="submit">
+                                <i class="bi bi-send"></i> Subscribe
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Bottom Footer -->
+            <div class="row footer-bottom align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    © 2026 MW Holdings. All rights reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <!-- jQuery -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Custom Scripts -->
+    <script src="./assets/app.js"></script>
+
+</body>
+
+</html>

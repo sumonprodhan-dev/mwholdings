@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Register | MW Holdings</title>
+    <link rel="icon" href="./assets/img/fab-icon.ico" type="image/x-icon">
+    <meta name="description"
+        content="A comprehensive consulting platform for renewable energy and electric system infrastructure.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Owl Carousel CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./assets/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-black">
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
+                <div class="logo-box">
+                    <i class="bi bi-lightning-charge-fill"></i>
+                </div>
+                <span class="brand-text fw-bold fs-4">
+                    <span class="text-white">MW</span><span class="text-info">Holdings</span>
+                </span>
+            </a>
+
+            <!-- Mobile Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navMenu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Offcanvas (Right to Left) -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="navMenu">
+                <div class="offcanvas-header d-lg-none border-bottom border-muted m-0">
+                    <div class="offcanvas-title d-flex align-items-center gap-2">
+                        <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
+                            <div class="logo-box">
+                                <i class="bi bi-lightning-charge-fill"></i>
+                            </div>
+                            <span class="brand-text fw-bold fs-4">
+                                <span class="text-white">MW</span><span class="text-info">Holdings</span>
+                            </span>
+                        </a>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white shadow-none"
+                        data-bs-dismiss="offcanvas"></button>
+                </div>
+
+                <div class="offcanvas-body d-lg-flex justify-content-center align-items-center">
+                    <!-- Center Menu Items -->
+                    <ul class="navbar-nav mx-auto gap-1">
+                        <li class="nav-item"><a class="nav-link-custom active" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link-custom active" href="./index.html#features">Features</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link-custom" href="./index.html#how-it-works">How It
+                                Works</a></li>
+                        <li class="nav-item"><a class="nav-link-custom"
+                                href="./index.html#testimonials">Testimonials</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link-custom" href="./index.html#pricing">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link-custom" href="./contact.html">Contact</a></li>
+                    </ul>
+
+                    <!-- Right Side Buttons -->
+                    <div class="nav-btns d-flex flex-column flex-lg-row align-items-center gap-2 ms-lg-3">
+                        <a class="text-decoration-none" href="./login.html">
+                            <button class="btn btn-outline-info rounded px-4">Sign In</button>
+                        </a>
+                        <a class="text-decoration-none" href="./contact.html">
+                            <button class="btn btn-info rounded px-4">Get Started</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="pt-5">
+            <div class="container">
+                <div class="row vh-100 align-items-center justify-content-center">
+                    <div class="col-lg-5 d-flex justify-content-center">
+                        <div class="feature-card w-100 register-form" data-aos="fade-up">
+                            <div class="text-center">
+                                <h3 class="section-title fs-1">Create Account</h3>
+                                <p class="section-subtitle mb-4">Sign up to manage your fleet</p>
+                            </div>
+                            <form>
+                                <div class=" mb-3">
+                                    <label class="form-label small">Your Name</label>
+                                    <input type="text" class="form-control" placeholder="John">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label small">Email Address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-envelope-fill"></i>
+                                        </span>
+                                        <input type="email" class="form-control" placeholder="name@company.com">
+                                    </div>
+                                </div>
+
+                                <!-- Password -->
+                                <div class="mb-3">
+                                    <label class="form-label small">Password</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control password-field"
+                                            placeholder="••••••••">
+                                        <span class="input-group-text cursor-pointer toggle-password-btn">
+                                            <i class="bi bi-eye-slash"></i>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- Confirm Password Field -->
+                                <div class="mb-3">
+                                    <label class="form-label small">Confirm Password</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control password-field"
+                                            placeholder="••••••••">
+                                        <span class="input-group-text cursor-pointer toggle-password-btn">
+                                            <i class="bi bi-eye-slash"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn-auth">Create Account</button>
+                            </form>
+                            <p class="text-center mt-4 mb-0 small text-white">
+                                Already have an account? <a href="./login.html" class="auth-link">Sign In</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="row gy-4">
+                <!-- Left Side: Logo and Contact -->
+                <div class="col-lg-7">
+                    <a class="navbar-brand d-flex align-items-center gap-2 mb-3" href="./index.html">
+                        <div class="logo-box">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                        </div>
+                        <span class="brand-text fw-bold fs-4">
+                            <span class="text-white">MW</span><span class="text-info">Holdings</span>
+                        </span>
+                    </a>
+                    <p class="mb-4" style="max-width: 400px;">
+                        The fleet & delivery management platform built exclusively for third-party logistics providers.
+                        Move faster, smarter, and more profitably.
+                    </p>
+                    <ul class="contact-info">
+                        <li><i class="bi bi-envelope"></i> contact@mwholdings.com</li>
+                        <li><i class="bi bi-telephone"></i> +1 (800) MWH-FLEET</li>
+                        <li><i class="bi bi-geo-alt"></i> mwholdings.com</li>
+                    </ul>
+                </div>
+
+                <!-- Right Side: Newsletter -->
+                <div class="col-lg-5">
+                    <h5 class="footer-heading">Stay in the loop</h5>
+                    <p class="mb-4">Get the latest updates on fleet tech, logistics insights, and platform news —
+                        delivered to your inbox.</p>
+
+                    <form class="newsletter-form">
+                        <div class="d-flex flex-column flex-sm-row gap-3">
+                            <input type="email" class="form-control" placeholder="your@email.com" required>
+                            <button class="btn btn-subscribe" type="submit">
+                                <i class="bi bi-send"></i> Subscribe
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Bottom Footer -->
+            <div class="row footer-bottom align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    © 2026 MW Holdings. All rights reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <!-- jQuery -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Custom Scripts -->
+    <script src="./assets/app.js"></script>
+
+</body>
+
+</html>
