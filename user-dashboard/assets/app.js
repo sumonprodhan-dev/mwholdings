@@ -89,8 +89,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+
 $(document).ready(function () {
-    $('.datatables').DataTable({
+    var table = $('.datatables').DataTable({
         "pageLength": 10,
         "language": {
             "search": "Search:",
@@ -102,5 +103,15 @@ $(document).ready(function () {
             }
         },
         "dom": '<"d-flex justify-content-between align-items-center mb-4 mt-2"lf>rt<"d-flex justify-content-between align-items-center mt-4"ip>',
+    });
+
+    $('#statusDropdown').on('change', function () {
+        var filterValue = $(this).val();
+
+        if (filterValue === 'all') {
+            table.search('').draw();
+        } else {
+            table.search(filterValue).draw();
+        }
     });
 });

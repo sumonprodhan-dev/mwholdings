@@ -64,7 +64,8 @@
           </li>
           <!--end::Navbar Search-->
           <li class="nav-item">
-            <a class="nav-link" id="dark-mode-toggle" href="#" data-bs-toggle="tooltip" title="Dark Mode / Light Mode" role="button">
+            <a class="nav-link" id="dark-mode-toggle" href="#" data-bs-toggle="tooltip" title="Dark Mode / Light Mode"
+              role="button">
               <i class="bi bi-moon-stars-fill"></i>
             </a>
           </li>
@@ -361,106 +362,153 @@
     </aside>
 
     <main class="app-content p-0">
-      <div class="container-fluid">
-        <div class="row">
-          
+      <div class="container-fluid mb-4">
+        <div class="container">
+          <div class="row">
+            <div class="card h-100 border-0 rounded-3 text-start stat-box mt-4 hover-item"
+              style="background-color: #f8f9fa; border: 2px solid #21c45d73 !important;">
+              <div class="d-flex align-items-center gap-3">
+                <span class="badge bg-danger-subtle d-flex align-items-center justify-content-center"
+                  style="height: 40px; width: 40px;">
+                  <i class="ri-fire-fill text-danger fs-3"></i>
+                </span>
+                <div class="flex-grow-1 mt-2">
+                  <h5 class="fw-bold fs-6 ">18 Weeks of Revenue!</h5>
+                  <p class="m-0 text-muted" style="font-size: 16px;">Your business has generated revenue for 18
+                    consecutive weeks. That's consistency.</p>
+                </div>
+                <div>
+                  <span class="fw-bold mb-0 text-secondary ms-auto"><i class="ri-close-large-line fs-5"></i></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card h-100 border-0 rounded-3 text-start stat-box mt-4 hover-item"
+              style="background-color: #f8f9fa; border: 1px solid #8a8a8ad3 !important;">
+              <div class="d-flex align-items-center gap-3">
+                <h5 class="fw-bold fs-6 m-0">Since your last visit:</h5>
+                <div>
+                  <span class="badge px-3 py-2 bg-danger-subtle text-danger"><i
+                      class="bi bi-bar-chart-line text-danger me-2"></i>Revenue down 1% ($32,355.81)</span>
+                  <span class="badge px-3 py-2 bg-success-subtle text-success"><i
+                      class="bi bi-file-earmark-fill text-success me-2"></i>1 new worksheet uploaded — P&L
+                    updated</span>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="card h-100 border-0 rounded-3 text-start stat-box mt-4 hover-item"
+              style="background-color: #f8f9fa; border-left: 4px solid #21c45d !important;">
+              <div class="d-flex align-items-center gap-3">
+                <span class="fw-bold mb-0 text-success">Quick Wins — Things you can do RIGHT NOW</span>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <span class="badge bg-danger-subtle text-danger">1 min
+                  conversation</span>
+                <div class="flex-grow-1 mt-2">
+                  <h5 class="fw-bold fs-6 ">Quick Wins — Things you can do RIGHT NOW <span class="text-muted"
+                      style="font-size: 12px;">— SOFIANOS — 8 DNAs in 4 weeks. Each DNA costs ~$16.50. That's $132 in
+                      waste.</span></h5>
+                  <p class="m-0 text-success" style="font-size: 14px;">Potential savings: $1,716/year if DNAs drop by
+                    half</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="container pt-4">
-              <a href="#" class="text-decoration-none">
-                <div class="card shadow rounded-4 overflow-hidden hover-item">
-                  <div
-                    class="row card-header border-bottom pt-4 px-4 d-flex justify-content-between align-items-center">
-                    <div class="col-lg-6">
-                      <h2 class="fw-bold mb-0" style="color: var(--primary-color); letter-spacing: 1px;">
-                        C8888312</h2>
-                      <p class="text-secondary mb-0">South East · Stn 259</p>
+        <div class="row mt-4">
+          <div class="col-lg-6 ">
+            <a href="#" class="text-decoration-none">
+              <div class="card shadow rounded-4 overflow-hidden hover-item">
+                <div class="row card-header border-bottom pt-4 px-4 d-flex justify-content-between align-items-center">
+                  <div class="col-lg-6">
+                    <h2 class="fw-bold mb-0" style="color: var(--primary-color); letter-spacing: 1px;">
+                      C8888312</h2>
+                    <p class="text-secondary mb-0">South East · Stn 259</p>
+                  </div>
+                  <div class="col-lg-6 text-end">
+                    <span class="badge rounded-pill px-3 py-2 mb-2" style="background-color: #e8f5e9; color: #21c45d;">
+                      ● Active
+                    </span>
+                    <!-- <div class="text-danger fw-bold small"><i class="bi bi-check2"></i> All Clear</div> -->
+                  </div>
+                </div>
+
+                <div class="card-body px-4">
+                  <div class="mb-4">
+                    <h6 class="text-uppercase text-secondary fw-bold small mb-3" style="letter-spacing: 1px;">Revenue
+                    </h6>
+                    <div class="row align-items-end">
+                      <div class="col-md-3">
+                        <small class="text-muted d-block mb-1">Latest Week</small>
+                        <h3 class="fw-bold mb-0" style="color: var(--primary-color)">$32,356</h3>
+                      </div>
+                      <div class="col-md-3 border-start">
+                        <small class="text-muted d-block mb-1">Packages</small>
+                        <h3 class="fw-bold mb-0 text-warning">13,311</h3>
+                      </div>
+                      <div class="col-md-3 border-start">
+                        <small class="text-muted d-block mb-1">Stops</small>
+                        <h3 class="fw-bold mb-0 text-success">8,041</h3>
+                      </div>
                     </div>
-                    <div class="col-lg-6 text-end">
-                      <span class="badge rounded-pill px-3 py-2 mb-2"
-                        style="background-color: #e8f5e9; color: #21c45d;">
-                        ● Active
-                      </span>
-                      <!-- <div class="text-danger fw-bold small"><i class="bi bi-check2"></i> All Clear</div> -->
+                    <div class="mt-4 d-flex align-items-center gap-3">
+                      <div class="progress flex-grow-1" style="height: 8px; border-radius: 10px;">
+                        <div class="progress-bar" role="progressbar"
+                          style="width: 99.7%; background-color: var(--primary-color);">
+                        </div>
+                      </div>
+                      <span class="fw-bold small">99.7% <span class="text-muted fw-normal">SLA</span></span>
                     </div>
                   </div>
 
-                  <div class="card-body px-4">
-                    <div class="mb-4">
-                      <h6 class="text-uppercase text-secondary fw-bold small mb-3" style="letter-spacing: 1px;">Revenue
-                      </h6>
-                      <div class="row align-items-end">
-                        <div class="col-md-3">
-                          <small class="text-muted d-block mb-1">Latest Week</small>
-                          <h3 class="fw-bold mb-0" style="color: var(--primary-color)">$32,356</h3>
-                        </div>
-                        <div class="col-md-3 border-start">
-                          <small class="text-muted d-block mb-1">Packages</small>
-                          <h3 class="fw-bold mb-0 text-warning">13,311</h3>
-                        </div>
-                        <div class="col-md-3 border-start">
-                          <small class="text-muted d-block mb-1">Stops</small>
-                          <h3 class="fw-bold mb-0 text-success">8,041</h3>
-                        </div>
-                      </div>
-                      <div class="mt-4 d-flex align-items-center gap-3">
-                        <div class="progress flex-grow-1" style="height: 8px; border-radius: 10px;">
-                          <div class="progress-bar" role="progressbar"
-                            style="width: 99.7%; background-color: var(--primary-color);">
-                          </div>
-                        </div>
-                        <span class="fw-bold small">99.7% <span class="text-muted fw-normal">SLA</span></span>
-                      </div>
-                    </div>
+                  <hr class="opacity-10">
 
-                    <hr class="opacity-10">
-
-                    <div class="row g-3">
-                      <div class="col-md-6">
-                        <div class="p-3 rounded-4 border d-flex align-items-center">
-                          <div class="me-3 fs-3">🚗</div>
-                          <div>
-                            <h4 class="mb-0 fw-bold" style="color: #8b5cf6;">43</h4>
-                            <small class="text-muted">Active Drivers</small>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="p-3 rounded-4 border d-flex align-items-center">
-                          <div class="me-3 fs-3">🗺️</div>
-                          <div>
-                            <h4 class="mb-0 fw-bold" style="color: var(--primary-color)">35</h4>
-                            <small class="text-muted">Routes</small>
-                          </div>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <div class="p-3 rounded-4 border d-flex align-items-center">
+                        <div class="me-3 fs-3">🚗</div>
+                        <div>
+                          <h4 class="mb-0 fw-bold" style="color: #8b5cf6;">43</h4>
+                          <small class="text-muted">Active Drivers</small>
                         </div>
                       </div>
                     </div>
+                    <div class="col-md-6">
+                      <div class="p-3 rounded-4 border d-flex align-items-center">
+                        <div class="me-3 fs-3">🗺️</div>
+                        <div>
+                          <h4 class="mb-0 fw-bold" style="color: var(--primary-color)">35</h4>
+                          <small class="text-muted">Routes</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-                    <div class="row mt-3 g-3 border-top">
-                      <div class="col-md-4">
-                        <div class="p-3 rounded-4 border h-100">
-                          <small class="text-muted d-block mb-2">Active Trucks</small>
-                          <h5 class="fw-bold mb-0 text-success">0</h5>
-                        </div>
+                  <div class="row mt-3 g-3 border-top">
+                    <div class="col-md-4">
+                      <div class="p-3 rounded-4 border h-100">
+                        <small class="text-muted d-block mb-2">Active Trucks</small>
+                        <h5 class="fw-bold mb-0 text-success">0</h5>
                       </div>
-                      <div class="col-md-4">
-                        <div class="p-3 rounded-4 border h-100">
-                          <small class="text-muted d-block mb-2">In Maintenance</small>
-                          <h5 class="fw-bold mb-0 text-success">0</h5>
-                        </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="p-3 rounded-4 border h-100">
+                        <small class="text-muted d-block mb-2">In Maintenance</small>
+                        <h5 class="fw-bold mb-0 text-success">0</h5>
                       </div>
-                      <div class="col-md-4">
-                        <div class="p-3 rounded-4 border h-100">
-                          <small class="text-muted d-block mb-2">Driver Risk</small>
-                          <p class="mb-0 text-muted small">No data</p>
-                        </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="p-3 rounded-4 border h-100">
+                        <small class="text-muted d-block mb-2">Driver Risk</small>
+                        <p class="mb-0 text-muted small">No data</p>
                       </div>
                     </div>
                   </div>
                 </div>
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>

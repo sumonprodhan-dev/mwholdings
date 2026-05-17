@@ -10,6 +10,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
   <link rel="stylesheet" href="./assets/vendor/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/vendor/css/adminlte.min.css">
   <link rel="stylesheet" href="./assets/vendor/css/bs-icon/bootstrap-icons.min.css">
@@ -64,7 +65,8 @@
           </li>
           <!--end::Navbar Search-->
           <li class="nav-item">
-            <a class="nav-link" id="dark-mode-toggle" href="#" data-bs-toggle="tooltip" title="Dark Mode / Light Mode" role="button">
+            <a class="nav-link" id="dark-mode-toggle" href="#" data-bs-toggle="tooltip" title="Dark Mode / Light Mode"
+              role="button">
               <i class="bi bi-moon-stars-fill"></i>
             </a>
           </li>
@@ -361,13 +363,333 @@
     </aside>
 
     <main class="app-content p-0">
-      <div class="container-fluid">
+      <div class="container-fluid my-4">
+        <div class="card h-100 rounded-3 text-start stat-box mt-4 hover-item bg-warning-subtle border border-warning">
+          <div class="d-flex align-items-center gap-3">
+            <span class="badge bg-warning-subtle d-flex align-items-center justify-content-center"
+              style="height: 40px; width: 40px;">
+              <i class="ri-error-warning-line text-warning fs-4"></i>
+            </span>
+            <div class="flex-grow-1 mt-2">
+              <h5 class="fw-bold fs-6 text-warning">1 week without a charge statement</h5>
+              <p class="m-0 text-muted" style="font-size: 16px;">Revenue for W18/2026 is estimated (~). Upload the
+                matching charge statement for exact figures.</p>
+            </div>
+          </div>
+        </div>
 
+        <!-- Navigation Tabs -->
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden mt-4">
+          <div class="card-body p-1" style="background: rgba(255,255,255,0.02);">
+            <ul class="nav nav-pills custom-nav-pills gap-1" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link fw-bold active text-secondary" id="pills-medals-tab" data-bs-toggle="pill"
+                  href="#pills-medals" role="tab" aria-controls="pills-medals" aria-selected="true">
+                  <i class="bi bi-upload me-2 text-info"></i>Upload & Reconcile
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link fw-bold text-secondary" id="pills-resources-tab" data-bs-toggle="pill"
+                  href="#pills-resources" role="tab" aria-controls="pills-resources" aria-selected="false">
+                  <i class="ri-history-line text-info me-2"></i>Statements History
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link fw-bold text-secondary" id="pills-driver-tab" data-bs-toggle="pill"
+                  href="#pills-driver" role="tab" aria-controls="pills-driver" aria-selected="false">
+                  <i class="ri-file-chart-line text-info me-2"></i></i>Charge Statement Review
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-medals" role="tabpanel" aria-labelledby="pills-medals-tab">
+            <div class="card h-100 rounded-4 text-start stat-box mt-4 hover-item p-4 border border-muted">
+              <div>
+                <h5 class="fw-bold mb-0 text-secondary">Upload carrier ISP Charge Statement</h5>
+                <p class="m-0 text-muted mt-2" style="font-size: 14px;">Upload your Charge Statement file. The system
+                  will parse all sections and compare against your weekly worksheet.</p>
+              </div>
+              <div class="d-flex align-items-center gap-5 mt-3 p-3">
+                <div>
+                  <p class="m-0 mb-2">Active Service Area</p>
+                  <button class="btn btn-info w-100">123456</button>
+                </div>
+                <div>
+                  <p class="m-0 mb-2">
+                    Statement File(s) (.xlsx / .csv / .xml)
+                  </p>
+                  <div>
+                    <label for="fileUpload" class="btn btn-info m-0 w-100">
+                      Choose Files to Upload
+                    </label>
+
+                    <input type="file" id="fileUpload" class="d-none" multiple accept=".xlsx">
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade text-light" id="pills-resources" role="tabpanel"
+            aria-labelledby="pills-resources-tab">
+            <div class="card border border-muted p-3 rounded-4 hover-item mt-4">
+              <div class="table-responsive overflow-hidden">
+                <table class="table table-striped table-borderless border-0 table-hover custom-table datatables">
+                  <thead>
+                    <tr class="text-secondary text-uppercase" style="font-size: 14px;">
+                      <th scope="col">Service Area</th>
+                      <th scope="col">Week</th>
+                      <th scope="col">Year</th>
+                      <th scope="col">Net Revenue</th>
+                      <th scope="col">Ground Pkgs</th>
+                      <th scope="col">Worksheet</th>
+                      <th scope="col">Uploaded</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>C8888312</th>
+                      <td>W17</td>
+                      <td>2026</td>
+                      <td>$32,355.81</td>
+                      <td>12,798</td>
+                      <td><i class="bi bi-check-circle-fill text-success"></i></td>
+                      <td class="text-warning">View Analysis <i class="bi bi-arrow-right"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade text-light" id="pills-driver" role="tabpanel" aria-labelledby="pills-driver-tab">
+            <div class="card h-100 rounded-4 text-start stat-box mt-4 hover-item  border border-muted">
+
+              <div class="d-flex align-items-center gap-5 mt-3 p-2">
+                <div>
+                  <p class="m-0 mb-2">Active Service Area</p>
+                  <button class="btn btn-info w-100">123456</button>
+                </div>
+                <div>
+                  <p class="m-0 mb-2">
+                    Statement Week
+                  </p>
+                  <div>
+                    <select class="form-select w-100 border border-info text-info" aria-label="Default select example">
+                      <option selected>Week 17</option>
+                      <option value="1">Week 18</option>
+                      <option value="2">Week 19</option>
+                      <option value="3">Week 20</option>
+                    </select>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <hr class="text-muted">
+
+            <div class="card h-100 border-0 rounded-3 text-start py-4 stat-box hover-item my-4"
+              style="background-color: #f8f9fa; border-left: 4px solid #21b9c4 !important;">
+
+              <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-file-earmark-fill"></i>
+                <span class="fw-bold mb-0 text-secondary">Last week (W17, 2026-04-25 – 2026-05-01) you earned $32,355.81
+                  net. Your packages and stops generated $19,981.98 in variable revenue; FedEx added $585.00 in
+                  incentive credits and $11,761.00 in base service charges. No penalties or deductions this week. Your
+                  large-package mix was 9.4%. Net revenue is down 0.8% week-over-week.</span>
+
+              </div>
+            </div>
+
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    <i class="bi bi-speedometer2 me-2 text-info"></i>Performance Overview
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <div class="row g-4">
+                      <div class="col-md-2">
+                        <div class="card h-100 border-0 rounded-3 text-start py-4 stat-box hover-item"
+                          style="background-color: #f8f9fa; border-top: 4px solid #21c45d !important;">
+                          <small class="text-muted d-block fw-bold">Total Revenue</small>
+                          <h3 class="fw-bold mb-0 text-success my-1">$32,356</h3>
+                          <small class="text-muted d-block">
+                            <span><i class="bi bi-caret-down-fill text-success"></i>-0.8%</span>
+                          </small>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card h-100 border-0 rounded-3 text-start stat-box py-4 hover-item"
+                          style="background-color: #f8f9fa; border-top: 4px solid #dc3545 !important;">
+                          <small class="text-muted d-block fw-bold">Net Revenue</small>
+                          <h3 class="fw-bold mb-0" style="color: #dc3545;">43</h3>
+                          <small class="text-muted d-block">
+                            <span><i class="bi bi-caret-down-fill text-danger"></i>-0.8%</span>
+                          </small>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card h-100 border-0 rounded-3 text-start py-4 stat-box hover-item"
+                          style="background-color: #f8f9fa; border-top: 4px solid #01e5f5 !important;">
+                          <small class="text-muted d-block fw-bold">Adjustment Total</small>
+                          <h3 class="fw-bold mb-0 text-info my-1">3</h3>
+                          <small class="text-muted d-block">
+                            <span><i class="bi bi-caret-down-fill text-info"></i>-0.8%</span>
+                          </small>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card h-100 border-0 rounded-3 text-start py-4 stat-box hover-item"
+                          style="background-color: #f8f9fa; border-top: 4px solid #21c45d !important;">
+                          <small class="text-muted d-block fw-bold">LP Revenue</small>
+                          <h3 class="fw-bold mb-0 text-success my-1">$1,286</h3>
+                          <small class="text-muted d-block">
+                            <span><i class="bi bi-caret-down-fill text-success"></i>-0.8%</span>
+                          </small>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card h-100 border-0 rounded-3 text-start stat-box py-4 hover-item"
+                          style="background-color: #f8f9fa; border-top: 4px solid #dc3545 !important;">
+                          <small class="text-muted d-block fw-bold" style="font-size: 13px;">Fuel Surcharge</small>
+                          <h3 class="fw-bold mb-0 my-1" style="color: #dc3545;">$2,222</h3>
+                          <small class="text-muted d-block">
+                            <span><i class="bi bi-caret-down-fill text-danger"></i>-0.8%</span>
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+                    <i class="bi bi-graph-up-arrow me-2 text-info"></i>Volume Indicators
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <div class="row g-4">
+                      <div class="col-md-2">
+                        <div class="card h-100 border-0 rounded-3 text-start py-4 stat-box hover-item"
+                          style="background-color: #f8f9fa; border-bottom: 4px solid #21c45d !important;">
+                          <small class="text-muted d-block fw-bold">Total Packages</small>
+                          <h3 class="fw-bold mb-0 text-success my-1">$32,356</h3>
+                          <small class="text-muted d-block">
+                            <span><i class="bi bi-caret-down-fill text-success"></i>-0.8%</span>
+                          </small>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card h-100 border-0 rounded-3 text-start stat-box py-4 hover-item"
+                          style="background-color: #f8f9fa; border-bottom: 4px solid #dc3545 !important;">
+                          <small class="text-muted d-block fw-bold">Total Stops</small>
+                          <h3 class="fw-bold mb-0" style="color: #dc3545;">43</h3>
+                          <small class="text-muted d-block">
+                            <span><i class="bi bi-caret-down-fill text-danger"></i>-0.8%</span>
+                          </small>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card h-100 border-0 rounded-3 text-start py-4 stat-box hover-item"
+                          style="background-color: #f8f9fa; border-bottom: 4px solid #01e5f5 !important;">
+                          <small class="text-muted d-block fw-bold">Ecomm Packages</small>
+                          <h3 class="fw-bold mb-0 text-info my-1">3</h3>
+                          <small class="text-muted d-block">
+                            <span><i class="bi bi-caret-down-fill text-info"></i>-0.8%</span>
+                          </small>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card h-100 border-0 rounded-3 text-start py-4 stat-box hover-item"
+                          style="background-color: #f8f9fa; border-bottom: 4px solid #21c45d !important;">
+                          <small class="text-muted d-block fw-bold">Ecomm Stops</small>
+                          <h3 class="fw-bold mb-0 text-success my-1">$1,286</h3>
+                          <small class="text-muted d-block">
+                            <span><i class="bi bi-caret-down-fill text-success"></i>-0.8%</span>
+                          </small>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card h-100 border-0 rounded-3 text-start stat-box py-4 hover-item"
+                          style="background-color: #f8f9fa; border-bottom: 4px solid #dc3545 !important;">
+                          <small class="text-muted d-block fw-bold" style="font-size: 13px;">LP Count (est.)</small>
+                          <h3 class="fw-bold mb-0 my-1" style="color: #dc3545;">$2,222</h3>
+                          <small class="text-muted d-block">
+                            <span><i class="bi bi-caret-down-fill text-danger"></i>-0.8%</span>
+                          </small>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card h-100 border-0 rounded-3 text-start stat-box py-4 hover-item"
+                          style="background-color: #f8f9fa; border-bottom: 4px solid #9135dc !important;">
+                          <small class="text-muted d-block fw-bold" style="font-size: 13px;">LP Desig %</small>
+                          <h3 class="fw-bold mb-0 my-1" style="color: #9135dc;">$2,222</h3>
+                          <small class="text-muted d-block">
+                            <span><i class="bi bi-caret-down-fill text-danger"></i>-0.8%</span>
+                          </small>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card h-100 border-0 rounded-3 text-start stat-box py-4 hover-item"
+                          style="background-color: #f8f9fa; border-bottom: 4px solid #dccb35 !important;">
+                          <small class="text-muted d-block fw-bold" style="font-size: 13px;">Pkgs / Stop</small>
+                          <h3 class="fw-bold mb-0 my-1" style="color: #dccb35;">$2,222</h3>
+                          <small class="text-muted d-block">
+                            <span><i class="bi bi-caret-down-fill text-danger"></i>-0.8%</span>
+                          </small>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="card h-100 border-0 rounded-3 text-start stat-box py-4 hover-item"
+                          style="background-color: #f8f9fa; border-bottom: 4px solid #35dc43 !important;">
+                          <small class="text-muted d-block fw-bold" style="font-size: 13px;">Avg Stops / Day</small>
+                          <h3 class="fw-bold mb-0 my-1" style="color: #35dc43;">$2,222</h3>
+                          <small class="text-muted d-block">
+                            <span><i class="bi bi-caret-down-fill text-danger"></i>-0.8%</span>
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseThree">
+                    <i class="bi bi-graph-up-arrow me-2 text-info"></i>Week-over-Week Trends
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Create a chart that shows how your revenue has changed over the last 7 days
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </div>
   <script src="./assets/vendor/js/bootstrap.bundle.min.js"></script>
   <script src="./assets/vendor/js/adminlte.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
   <script src="./assets/app.js"></script>
 </body>
 

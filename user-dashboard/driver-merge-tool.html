@@ -10,6 +10,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
   <link rel="stylesheet" href="./assets/vendor/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/vendor/css/adminlte.min.css">
   <link rel="stylesheet" href="./assets/vendor/css/bs-icon/bootstrap-icons.min.css">
@@ -64,7 +65,8 @@
           </li>
           <!--end::Navbar Search-->
           <li class="nav-item">
-            <a class="nav-link" id="dark-mode-toggle" href="#" data-bs-toggle="tooltip" title="Dark Mode / Light Mode" role="button">
+            <a class="nav-link" id="dark-mode-toggle" href="#" data-bs-toggle="tooltip" title="Dark Mode / Light Mode"
+              role="button">
               <i class="bi bi-moon-stars-fill"></i>
             </a>
           </li>
@@ -361,13 +363,188 @@
     </aside>
 
     <main class="app-content p-0">
-      <div class="container-fluid">
+      <div class="container-fluid my-3">
+        <!-- Navigation Tabs -->
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden mt-4">
+          <div class="card-body p-1" style="background: rgba(255,255,255,0.02);">
+            <ul class="nav nav-pills custom-nav-pills gap-1" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link fw-bold active text-secondary" id="pills-medals-tab" data-bs-toggle="pill"
+                  href="#pills-medals" role="tab" aria-controls="pills-medals" aria-selected="true">
+                  <i class="ri-file-copy-line text-info me-2"></i>Potential Duplicate
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link fw-bold text-secondary" id="pills-resources-tab" data-bs-toggle="pill"
+                  href="#pills-resources" role="tab" aria-controls="pills-resources" aria-selected="false">
+                  <i class="ri-seo-line text-info me-2"></i>Manual Search
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link fw-bold text-secondary" id="pills-driver-tab" data-bs-toggle="pill"
+                  href="#pills-driver" role="tab" aria-controls="pills-driver" aria-selected="false">
+                  <i class="ri-file-user-line text-info me-2"></i>Name Aliases
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link fw-bold text-secondary" id="pills-reports-tab" data-bs-toggle="pill"
+                  href="#pills-reports" role="tab" aria-controls="pills-reports" aria-selected="false">
+                  <i class="ri-pass-valid-line text-info me-2"></i>Identity Conflicts
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
+        <div class="tab-content mt-3" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-medals" role="tabpanel" aria-labelledby="pills-medals-tab">
+            <div class="card h-100 rounded-4 text-start stat-box hover-item  border border-muted">
+
+              <div class="d-flex flex-column align-items-center p-3">
+                <div class="badge bg-info-subtle px-3 py-3">
+                  <i class="ri-shield-check-fill text-info fs-2"></i>
+                </div>
+                <h4 class="text-info my-3">No duplicates detected</h4>
+                <p class="m-0 text-muted">All 43 drivers have unique names. Use manual search if you know of a specific
+                  match.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resources Overview Content -->
+          <div class="tab-pane fade text-light" id="pills-resources" role="tabpanel"
+            aria-labelledby="pills-resources-tab">
+            <form action="">
+              <div class="row mb-3">
+                <div class="col-12">
+                  <input type="text" class="form-control border py-2" placeholder="Start typing..." aria-label="Search">
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Driver Analysis Content -->
+          <div class="tab-pane fade text-light" id="pills-driver" role="tabpanel" aria-labelledby="pills-driver-tab">
+            <!-- Top 3 Stats Grid -->
+            <div class="card h-100 rounded-4 text-start stat-box hover-item  border border-muted">
+
+              <div class="d-flex flex-column align-items-center p-3">
+                <div class="badge bg-info-subtle px-3 py-3">
+                  <i class="ri-file-text-line text-info fs-2"></i>
+                </div>
+                <h4 class="text-info my-3">No name aliases yet</h4>
+                <p class="m-0 text-muted">Merge duplicate drivers to create aliases automatically</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reports Cards Content -->
+          <div class="tab-pane fade text-light" id="pills-reports" role="tabpanel" aria-labelledby="pills-reports-tab">
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <span class="text-secondary fw-bold me-2">Filter:</span>
+
+              <select id="statusDropdown" class="form-select w-auto bg-light-subtle border-info">
+                <option value="all">All Status</option>
+                <option value="Open">Open</option>
+                <option value="Skipped">Skipped</option>
+              </select>
+            </div>
+
+            <div
+              class="card h-100 rounded-3 text-start stat-box mt-4 hover-item bg-warning-subtle border border-warning">
+              <div class="d-flex align-items-center gap-3">
+                <span class="badge bg-warning-subtle d-flex align-items-center justify-content-center"
+                  style="height: 40px; width: 40px;">
+                  <i class="ri-error-warning-line text-warning fs-4"></i>
+                </span>
+                <div class="flex-grow-1 mt-2">
+                  <h5 class="text-warning" style="font-size: 15px;">2 identity conflicts need review. Each row is a name
+                    the ingest cascade couldn't confidently attach to an existing driver — resolving here keeps payroll
+                    attribution correct and unblocks Paychex export.</h5>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="card h-100 rounded-3 text-start stat-box mt-4 hover-item border border-info">
+              <div class="d-flex align-items-center gap-3">
+                <h4>POGUE,HUNTER BRAXTON</h4>
+                <div class="d-flex align-items-center ">
+                  <span class="badge bg-warning-subtle text-warning">Missing FedEx ID</span>
+                </div>
+              </div>
+              <p class="m-0">C8888312 · Queued May 7, 2026</p>
+              <div class="badge bg-light-subtle d-flex align-items-center justify-content-start py-2 my-2">
+                <p class="m-0 text-muted">Source: <span class="fw-bold text-muted">payroll_calc (ref_id=2888)</span></p>
+              </div>
+              <p>No candidate drivers — this name doesn't match any existing driver. Use "Create new driver" below.</p>
+              <div class="d-flex justify-content-start">
+                <button class="btn btn-info fw-bold" type="button" data-bs-toggle="modal"
+                  data-bs-target="#createDriverModal"><i class="ri-add-line me-2"></i>Create new driver</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
+
+    <div class="modal fade" id="createDriverModal" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content custom-modal-dark border-0 rounded-4">
+          <div class="modal-body p-4">
+            <div class="d-flex align-items-center justify-content-between">
+              <h6 class="text-uppercase fw-bold mb-4 text-info" style="letter-spacing: 1px;"><i
+                  class="bi bi-plus-circle me-2"></i> Add New Driver
+              </h6>
+              <!-- cross button -->
+              <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form>
+              <div class="row mb-3">
+                <div class="col-12">
+                  <label class="form-label text-secondary small text-uppercase fw-bold">Driver Name</label>
+                  <input type="text" class="form-control border" value="POGUE,HUNTER BRAXTON">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <label class="form-label text-secondary small text-uppercase fw-bold">FedEx ID</label>
+                  <input type="text" class="form-control border" placeholder="FedEx ID">
+                </div>
+                <div class="col-6">
+                  <label class="form-label text-secondary small text-uppercase fw-bold">Select Service Area</label>
+                  <select class="form-select border text-info" aria-label="Default select example">
+                    <option selected>1</option>
+                    <option value="1">2</option>
+                    <option value="1">3</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Notes -->
+              <div class="mb-4">
+                <label class="form-label text-secondary small text-uppercase fw-bold">Notes</label>
+                <textarea class="form-control border" rows="2" placeholder="Optional notes..."></textarea>
+              </div>
+
+              <!-- Footer Buttons -->
+              <div class="d-flex justify-content-end gap-2">
+                <button type="button" class="btn btn-outline-danger rounded-pill px-4"
+                  data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-info rounded-pill px-4 fw-bold">Save
+                  Changes</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="./assets/vendor/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
   <script src="./assets/vendor/js/adminlte.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
   <script src="./assets/app.js"></script>
 </body>
 
