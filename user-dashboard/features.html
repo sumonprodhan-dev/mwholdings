@@ -64,7 +64,8 @@
           </li>
           <!--end::Navbar Search-->
           <li class="nav-item">
-            <a class="nav-link" id="dark-mode-toggle" href="#" data-bs-toggle="tooltip" title="Dark Mode / Light Mode" role="button">
+            <a class="nav-link" id="dark-mode-toggle" href="#" data-bs-toggle="tooltip" title="Dark Mode / Light Mode"
+              role="button">
               <i class="bi bi-moon-stars-fill"></i>
             </a>
           </li>
@@ -362,7 +363,129 @@
 
     <main class="app-content p-0">
       <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center my-4">
+          <div>
+            <h3 class="fw-bold mb-0">Features & Updates</h3>
+            <p class="m-0">What's new in logXIQ — organized by new features and resolved issues.</p>
+          </div>
+        </div>
 
+        <!-- Navigation Tabs -->
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden" style="max-width: fit-content;">
+          <div class="card-body p-1" style="background: rgba(255,255,255,0.02);">
+            <ul class="nav nav-pills custom-nav-pills gap-1" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link fw-bold active text-secondary" id="pills-medals-tab" data-bs-toggle="pill"
+                  href="#pills-medals" role="tab" aria-controls="pills-medals" aria-selected="true">
+                  <i class="bi bi-rocket-takeoff me-2 text-info"></i>New Features
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link fw-bold text-secondary" id="pills-resources-tab" data-bs-toggle="pill"
+                  href="#pills-resources" role="tab" aria-controls="pills-resources" aria-selected="false">
+                  <i class="bi bi-bug me-2 text-info"></i>Bug Fixes & Improvements
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tab-content" id="pills-tabContent">
+          <!-- P&D Medals Content (Weekly Grid Calendar jeta ektu age banalam) -->
+          <div class="tab-pane fade show active" id="pills-medals" role="tabpanel" aria-labelledby="pills-medals-tab">
+
+            <div class="card h-100 border-0 rounded-3 text-start p-4 stat-box hover-item mt-4"
+              style="background-color: #f8f9fa; border-left: 4px solid #05b14d !important;">
+              <div class="d-flex align-items-center justify-content-start gap-2">
+                <span class="badge bg-success-subtle text-success py-1 px-3">NEW</span>
+                <small class="text-muted d-block fw-bold fs-6">Fleet Intelligence System</small>
+              </div>
+              <p class="text-secondary m-0 my-2" style="font-size: 12px;">v3.0.0 · March 28, 2026</p>
+              <p class="m-0 text-muted mb-3">A complete fleet management intelligence platform with 21 tools to help you
+                reduce costs, prevent breakdowns, and make smarter decisions about your trucks.</p>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="d-flex align-items-center justify-content-start gap-2">
+                    <span
+                      style="width: 10px; height: 10px; background: #05b14d; border-radius: 50%; display: inline-block;"></span>
+                    <p class="m-0">Vendor Scorecard — see which shops are cheapest and fastest for each service type</p>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-center justify-content-start gap-2">
+                    <span
+                      style="width: 10px; height: 10px; background: #05b14d; border-radius: 50%; display: inline-block;"></span>
+                    <p class="m-0">Vendor Scorecard — see which shops are cheapest and fastest for each service type</p>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-center justify-content-start gap-2">
+                    <span
+                      style="width: 10px; height: 10px; background: #05b14d; border-radius: 50%; display: inline-block;"></span>
+                    <p class="m-0">Vendor Scorecard — see which shops are cheapest and fastest for each service type</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card h-100 border-0 rounded-3 text-start stat-box hover-item mt-4 bg-light-subtle">
+                <p class="m-0 text-warning">How to use</p>
+                <p class="m-0 text-muted">Drivers and leads log in at the same URL as owners. The system detects their role and shows the appropriate view automatically.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Resources Overview Content -->
+          <div class="tab-pane fade text-light" id="pills-resources" role="tabpanel"
+            aria-labelledby="pills-resources-tab">
+            <div class="card h-100 border-0 rounded-3 text-start p-4 stat-box hover-item mt-4"
+              style="background-color: #f8f9fa; border-left: 4px solid #d82f2f !important;">
+              <div class="d-flex align-items-center justify-content-start gap-2">
+                <span class="badge bg-danger-subtle text-danger py-1 px-3">critical</span>
+                <small class="text-muted d-block fw-bold fs-6">Fleet Intelligence System</small>
+              </div>
+              <p class="text-secondary m-0 my-2" style="font-size: 12px;">v3.0.0 · March 28, 2026</p>
+              <p class="m-0 text-muted mb-3">A complete fleet management intelligence platform with 21 tools to help you
+                reduce costs, prevent breakdowns, and make smarter decisions about your trucks.</p>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="d-flex align-items-center justify-content-start gap-2">
+                    <span><i class="ri-close-line text-danger fs-6"></i></span>
+                    <p class="m-0">Vendor Scorecard — see which shops are cheapest and fastest for each service type</p>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-center justify-content-start gap-2">
+                    <span><i class="ri-close-line text-danger fs-6"></i></span>
+                    <p class="m-0">Vendor Scorecard — see which shops are cheapest and fastest for each service type</p>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex align-items-center justify-content-start gap-2">
+                    <span><i class="ri-close-line text-danger fs-6"></i></span>
+                    <p class="m-0">Vendor Scorecard — see which shops are cheapest and fastest for each service type</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Driver Analysis Content -->
+          <div class="tab-pane fade text-light" id="pills-driver" role="tabpanel" aria-labelledby="pills-driver-tab">
+            <div class="card h-100 rounded-4 text-start stat-box hover-item  border border-muted mt-2">
+              <div class="d-flex flex-column align-items-center p-3">
+                <div class="badge bg-info-subtle px-3 py-3">
+                  <i class="ri-chat-check-line text-info fs-2"></i>
+                </div>
+                <h4 class="text-info my-3">No submissions yet</h4>
+                <p class="m-0 text-muted">Your suggestions and error reports will appear here.</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </div>

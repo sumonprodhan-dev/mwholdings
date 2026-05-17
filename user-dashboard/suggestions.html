@@ -64,7 +64,8 @@
           </li>
           <!--end::Navbar Search-->
           <li class="nav-item">
-            <a class="nav-link" id="dark-mode-toggle" href="#" data-bs-toggle="tooltip" title="Dark Mode / Light Mode" role="button">
+            <a class="nav-link" id="dark-mode-toggle" href="#" data-bs-toggle="tooltip" title="Dark Mode / Light Mode"
+              role="button">
               <i class="bi bi-moon-stars-fill"></i>
             </a>
           </li>
@@ -362,7 +363,107 @@
 
     <main class="app-content p-0">
       <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center my-4">
+          <div>
+            <h3 class="fw-bold mb-0">Suggestions & Support</h3>
+            <p class="m-0">Share your ideas, report issues, or track your submissions.</p>
+          </div>
+        </div>
 
+        <!-- Navigation Tabs -->
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+          <div class="card-body p-1" style="background: rgba(255,255,255,0.02);">
+            <ul class="nav nav-pills custom-nav-pills gap-1" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link fw-bold active text-secondary" id="pills-medals-tab" data-bs-toggle="pill"
+                  href="#pills-medals" role="tab" aria-controls="pills-medals" aria-selected="true">
+                  <i class="bi bi-question-circle me-2 text-info"></i>Team Inbox
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link fw-bold text-secondary" id="pills-resources-tab" data-bs-toggle="pill"
+                  href="#pills-resources" role="tab" aria-controls="pills-resources" aria-selected="false">
+                  <i class="ri-lightbulb-line me-2 text-info"></i>Submit a Suggestion
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link fw-bold text-secondary" id="pills-driver-tab" data-bs-toggle="pill"
+                  href="#pills-driver" role="tab" aria-controls="pills-driver" aria-selected="false">
+                  <i class="ri-file-chart-line text-info me-2"></i>My Submissions
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tab-content" id="pills-tabContent">
+          <!-- P&D Medals Content (Weekly Grid Calendar jeta ektu age banalam) -->
+          <div class="tab-pane fade show active" id="pills-medals" role="tabpanel" aria-labelledby="pills-medals-tab">
+            <!-- Driver Card -->
+            <div class="card h-100 rounded-4 text-start stat-box hover-item  border border-muted mt-2">
+              <div class="d-flex flex-column align-items-center p-3">
+                <div class="badge bg-info-subtle px-3 py-3">
+                  <i class="ri-mail-forbid-line text-info fs-2"></i>
+                </div>
+                <h4 class="text-info my-3">No submissions yet</h4>
+                <p class="m-0 text-muted">When your team submits suggestions or reports issues, they'll appear here.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resources Overview Content -->
+          <div class="tab-pane fade text-light" id="pills-resources" role="tabpanel"
+            aria-labelledby="pills-resources-tab">
+            <div class="card h-100 rounded-4 text-start stat-box hover-item  border border-muted p-4">
+              <div class="my-4">
+                <h5>We'd love to hear from you</h5>
+                <p class="m-0 text-muted mt-2">Have an idea to make LogXIQ better? Something confusing? Something you wish it could do? Tell us. We read every single suggestion.</p>
+              </div>
+              <form>
+
+                <div class="mb-3">
+                  <label class="form-label text-secondary small text-uppercase fw-bold">Category</label>
+                  <select class="form-select border custom-input-dark bg-light-subtle">
+                    <option selected disabled>--Select Category--</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label text-secondary small text-uppercase fw-bold">Title</label>
+                  <input type="text" class="form-control border" placeholder="e.g, Give your idea a title">
+                </div>
+
+                <!-- Notes -->
+                <div class="mb-4">
+                  <label class="form-label text-secondary small text-uppercase fw-bold">Description *</label>
+                  <textarea class="form-control border" rows="2" placeholder="Descripe what happened..."></textarea>
+                </div>
+
+                <!-- Footer Buttons -->
+                <div class="d-flex justify-content-end gap-2 mt-3">
+                  <button type="submit" class="btn btn-info rounded-pill px-4 fw-bold">Submit Suggestion</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Driver Analysis Content -->
+          <div class="tab-pane fade text-light" id="pills-driver" role="tabpanel" aria-labelledby="pills-driver-tab">
+            <div class="card h-100 rounded-4 text-start stat-box hover-item  border border-muted mt-2">
+              <div class="d-flex flex-column align-items-center p-3">
+                <div class="badge bg-info-subtle px-3 py-3">
+                  <i class="ri-chat-check-line text-info fs-2"></i>
+                </div>
+                <h4 class="text-info my-3">No submissions yet</h4>
+                <p class="m-0 text-muted">Your suggestions and error reports will appear here.</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </div>
