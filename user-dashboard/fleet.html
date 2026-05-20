@@ -367,8 +367,8 @@
             <div class="container-fluid pt-3 my-3">
 
                 <div class=" d-flex align-items-center justify-content-end">
-                    <button class="btn btn-info fw-bold" data-bs-toggle="modal" data-bs-target="#addTruckModal"><i
-                            class="bi bi-plus-circle me-2"></i>Add Truck</button>
+                    <a href="./fleet-create.html" class="btn btn-info fw-bold"><i
+                            class="bi bi-plus-circle me-2"></i>Add Truck</a>
                 </div>
 
                 <div class="custom-profile-card p-3 rounded-3 hover-item mt-4">
@@ -408,7 +408,7 @@
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="#"><i
                                                             class="bi bi-eye-fill me-2 text-info"></i>View</a></li>
-                                                <li><a class="dropdown-item" href="#"><i
+                                                <li><a class="dropdown-item" href="./fleet-edit.html"><i
                                                             class="ri-edit-fill me-2 text-warning"></i>Edit</a></li>
                                                 <li><a class="dropdown-item" href="#"><i
                                                             class="bi bi-trash-fill me-2 text-danger"></i>Delete</a>
@@ -844,108 +844,6 @@
 
             </div>
         </main>
-
-
-        <!-- Add Modal -->
-        <div class="modal fade" id="addTruckModal" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content custom-modal-dark border-0 rounded-4">
-                    <div class="modal-body p-4">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <h6 class="text-uppercase fw-bold mb-4 text-info" style="letter-spacing: 1px;"><i
-                                    class="bi bi-plus-circle me-2"></i>Add Truck</h6>
-                            <!-- cross button -->
-                            <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                        </div>
-                        <form>
-
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label text-secondary small fw-bold">FedEx
-                                        Unit</label>
-                                    <input type="text" class="form-control border" placeholder="e.g, 126465">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label text-secondary small fw-bold">Ownership</label>
-                                    <select class="form-select custom-input-dark border">
-                                        <option selected disabled>Select Ownership</option>
-                                        <option>Schedule B (Owner)</option>
-                                        <option>Rental</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label text-secondary small fw-bold">Type</label>
-                                    <select class="form-select custom-input-dark border">
-                                        <option selected disabled>Select Type</option>
-                                        <option>Step Van</option>
-                                        <option>Cargo Van</option>
-                                        <option>Box Truck</option>
-                                        <option>Sprinter</option>
-                                        <option>Other</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label text-secondary small fw-bold">Current Mileage</label>
-                                    <input type="number" class="form-control border" placeholder="e.g, 126465">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label text-secondary small fw-bold">Year</label>
-                                    <input type="number" class="form-control border" placeholder="e.g, 2020">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label text-secondary small fw-bold">Make</label>
-                                    <input type="text" class="form-control border" placeholder="e.g, Toyota">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label text-secondary small fw-bold">Model</label>
-                                    <input type="text" class="form-control border" placeholder="e.g, Camry">
-                                </div>
-
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label text-secondary small fw-bold">Fuel Type</label>
-                                    <select class="form-select custom-input-dark border">
-                                        <option selected disabled>Select Type</option>
-                                        <option>Diesel</option>
-                                        <option>Gasoline</option>
-                                        <option>CNG</option>
-                                        <option>Electric</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-md-12 mb-3">
-                                    <label class="form-label text-secondary small fw-bold">VIN</label>
-                                    <input type="text" class="form-control border" placeholder="e.g, 123456">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label text-secondary small fw-bold">License Plate</label>
-                                    <input type="text" class="form-control border" placeholder="e.g, 123456">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label text-secondary small fw-bold">Cube Capacity (cu ft)</label>
-                                    <input type="text" class="form-control border" placeholder="e.g, 123456">
-                                </div>
-
-                                <div class="col-md-12 mb-3">
-                                    <label class="form-label text-secondary small text-uppercase fw-bold">Notes</label>
-                                    <textarea class="form-control border" rows="2"
-                                        placeholder="Optional notes..."></textarea>
-                                </div>
-                            </div>
-
-
-                            <!-- Footer Buttons -->
-                            <div class="d-flex justify-content-end gap-2 mt-3">
-                                <button type="button" class="btn btn-outline-danger rounded-pill px-4"
-                                    data-bs-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-info rounded-pill px-4 fw-bold">Save
-                                    Changes</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <script src="./assets/vendor/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/vendor/js/adminlte.min.js"></script>

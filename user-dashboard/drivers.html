@@ -388,11 +388,9 @@
               style="font-size: 0.85rem; border: 1px solid var(--primary-color);">
               <i class="bi bi-download"></i> Export
             </button>
-            <button class="btn rounded-pill px-4 shadow-sm fw-bold border-0"
-              style="background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); font-size: 0.85rem;"
-              data-bs-toggle="modal" data-bs-target="#addDriverModal">
+            <a href="./drivers-create.html" class="btn btn-info rounded-pill px-4 border-0">
               + Add Driver
-            </button>
+          </a>
           </div>
         </div>
 
@@ -418,8 +416,8 @@
                 <tr>
                   <th>John Doe</th>
                   <td class="text-start" style="font-size: 12px;">
-                    <span class="fw-bold">Email:</span> <br>
-                    <span class="fw-bold">Phone:</span>
+                    <span class="fw-bold">driver@gmail.com</span> <br>
+                    <span class="fw-bold">1234567899</span>
                   </td>
                   <th>2022-01-01</th>
                   <td>2.3</td>
@@ -434,7 +432,7 @@
                   </td>
                   <td>
                     <button class="btn btn-outline-info btn-sm rounded-pill px-3">Pay</button>
-                    <button class="btn btn-outline-warning btn-sm rounded-pill px-3">Edit</button>
+                    <a href="./drivers-edit.html" class="btn btn-outline-warning btn-sm rounded-pill px-3">Edit</a>
                   </td>
                 </tr>
               </tbody>
@@ -601,51 +599,6 @@
 
       </div>
     </main>
-
-    <!-- Add Modal -->
-    <div class="modal fade" id="addDriverModal" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content custom-modal-dark border-0 rounded-4">
-          <div class="modal-body p-4">
-            <div class="d-flex align-items-center justify-content-between">
-              <h6 class="text-uppercase fw-bold mb-4 text-info" style="letter-spacing: 1px;"><i
-                  class="bi bi-plus-circle me-2"></i>Add Driver</h6>
-              <!-- cross button -->
-              <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <form>
-
-              <div class="mb-3">
-                <label class="form-label text-secondary small text-uppercase fw-bold">Name</label>
-                <input type="text" class="form-control border" placeholder="e.g, John Doe">
-              </div>
-
-              <div class="mb-3">
-                <label class="form-label text-secondary small text-uppercase fw-bold">Phone</label>
-                <input type="tel" class="form-control border" placeholder="e.g, 08123456789">
-              </div>
-              <div class="mb-3">
-                <label class="form-label text-secondary small text-uppercase fw-bold">Email</label>
-                <input type="email" class="form-control border" placeholder="e.g, 0A2eU@example.com">
-              </div>
-              <div class="mb-3">
-                <label class="form-label text-secondary small text-uppercase fw-bold">Hire Date</label>
-                <input type="date" class="form-control border" placeholder="">
-              </div>
-
-
-              <!-- Footer Buttons -->
-              <div class="d-flex justify-content-end gap-2 mt-3">
-                <button type="button" class="btn btn-outline-danger rounded-pill px-4"
-                  data-bs-dismiss="modal">Cancel</button>
-                <button type="submit" class="btn btn-info rounded-pill px-4 fw-bold">Save
-                  Driver</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
   <script src="./assets/vendor/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>

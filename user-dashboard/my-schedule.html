@@ -431,9 +431,8 @@
                     </div> -->
                 </div>
                 <div class="d-flex align-items-center justify-content-end mt-3">
-                    <button class="btn btn-info rounded-pill px-4 ms-3 fw-bold shadow-sm" data-bs-toggle="modal"
-                        data-bs-target="#addShiftModal">+ Add
-                        Shift</button>
+                    <a href="./my-schedule-create.html" class="btn btn-info rounded-pill px-4 ms-3 fw-bold shadow-sm">+ Add
+                        Shift</a>
                 </div>
 
                 <div class="mt-4">
@@ -460,7 +459,7 @@
                                     <td>Shift 1</td>
                                     <td>Active</td>
                                     <td class="text-center">
-                                        <button class="btn btn-sm btn-info">Edit</button>
+                                        <a href="./my-schedule-edit.html" class="btn btn-sm btn-info">Edit</a>
                                         <button class="btn btn-sm btn-danger">Delete</button>
                                     </td>
                                 </tr>
@@ -765,123 +764,7 @@
 
 
 
-    <!-- Add Shift Modal -->
-    <div class="modal fade" id="addShiftModal" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content custom-modal-dark border-0 rounded-4">
-                <div class="modal-body p-4">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <h6 class="text-uppercase fw-bold mb-4 text-info" style="letter-spacing: 1px;">Add Shift</h6>
-                        <!-- cross button -->
-                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
-                    </div>
-                    <form>
-                        <!-- Driver Search -->
-                        <div class="mb-3">
-                            <label class="form-label text-secondary small text-uppercase fw-bold">Driver *</label>
-                            <select class="form-select custom-input-dark">
-                                <option selected>Search drivers...</option>
-                            </select>
-                        </div>
-
-                        <!-- Driver Role (Icon Selection) -->
-                        <div class="mb-3">
-                            <label class="form-label text-secondary small text-uppercase fw-bold">Driver Role</label>
-                            <div class="row g-2">
-                                <div class="col-4">
-                                    <div class="role-card active text-center p-2 rounded-3 border border-info">
-                                        <div class="fs-4">🚐</div>
-                                        <small class="fw-bold d-block">Driving</small>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="role-card text-center p-2 rounded-3 border">
-                                        <div class="fs-4">📚</div>
-                                        <small class="fw-bold d-block text-secondary">Training</small>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="role-card text-center p-2 rounded-3 border">
-                                        <div class="fs-4">🦘</div>
-                                        <small class="fw-bold d-block text-secondary">Jumping</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Service Area -->
-                        <div class="mb-3">
-                            <label class="form-label text-secondary small text-uppercase fw-bold">Service Area *</label>
-                            <select class="form-select border">
-                                <option selected>C8888312</option>
-                            </select>
-                        </div>
-
-                        <!-- Route / Work Area -->
-                        <div class="mb-3">
-                            <label class="form-label text-secondary small text-uppercase fw-bold">Route / Work
-                                Area</label>
-                            <select class="form-select border">
-                                <option selected>Unassigned</option>
-                            </select>
-                        </div>
-
-                        <!-- Date and Status Row -->
-                        <div class="row mb-3">
-                            <div class="col-6">
-                                <label class="form-label text-secondary small text-uppercase fw-bold">Date *</label>
-                                <input type="date" class="form-control border" value="2026-05-10">
-                            </div>
-                            <div class="col-6">
-                                <label class="form-label text-secondary small text-uppercase fw-bold">Status</label>
-                                <select class="form-select border">
-                                    <option selected>Scheduled</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Pay Type and Shift Start Row -->
-                        <div class="row mb-3">
-                            <div class="col-6">
-                                <label class="form-label text-secondary small text-uppercase fw-bold">Pay Type</label>
-                                <select class="form-select border">
-                                    <option selected>Regular</option>
-                                </select>
-                            </div>
-                            <div class="col-6">
-                                <label class="form-label text-secondary small text-uppercase fw-bold">Shift
-                                    Start</label>
-                                <input type="time" class="form-control border" value="07:00">
-                            </div>
-                        </div>
-
-                        <!-- Shift End -->
-                        <div class="row mb-3">
-                            <div class="col-6">
-                                <label class="form-label text-secondary small text-uppercase fw-bold">Shift End</label>
-                                <input type="time" class="form-control border" value="17:00">
-                            </div>
-                        </div>
-
-                        <!-- Notes -->
-                        <div class="mb-4">
-                            <label class="form-label text-secondary small text-uppercase fw-bold">Notes</label>
-                            <textarea class="form-control border" rows="2" placeholder="Optional notes..."></textarea>
-                        </div>
-
-                        <!-- Footer Buttons -->
-                        <div class="d-flex justify-content-end gap-2">
-                            <button type="button" class="btn btn-outline-danger rounded-pill px-4"
-                                data-bs-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-info rounded-pill px-4 fw-bold">Save
-                                Shift</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <script src="./assets/vendor/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
