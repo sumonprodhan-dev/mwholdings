@@ -115,3 +115,22 @@ $(document).ready(function () {
         }
     });
 });
+
+// Select2
+$(document).ready(function () {
+    $('.select2-enable').select2({
+        placeholder: "Select an Option",
+        allowClear: true,
+        width: '100%'
+    });
+});
+
+// Flatpickr
+flatpickr(".datepicker", {
+    dateFormat: "M j, Y",
+    allowInput: true,
+    altInput: false,
+});
+
+
+

@@ -10,11 +10,18 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="./assets/vendor/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/vendor/css/adminlte.min.css">
     <link rel="stylesheet" href="./assets/vendor/css/bs-icon/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./assets/vendor/css/remix-icon/remixicon.css">
     <link rel="stylesheet" href="./assets/style.css">
+
+    <style>
+
+    </style>
 </head>
 
 <body class="layout-fixed sidebar-expand-lg bg-body-tertiary app-loaded" data-new-gr-c-s-check-loaded="14.1290.0"
@@ -214,7 +221,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./fuel.html" class="nav-link">
+                                <a href="./fuel.html" class="nav-link active">
                                     <i class="nav-icon ri-gas-station-fill fs-5"></i>
                                     <p>Fuel</p>
                                 </a>
@@ -269,7 +276,7 @@
                 </a>
               </li> -->
                             <li class="nav-item">
-                                <a href="./csa-management.html" class="nav-link active">
+                                <a href="./csa-management.html" class="nav-link">
                                     <i class="nav-icon bi bi-folder"></i>
                                     <p>CSA Management</p>
                                 </a>
@@ -382,69 +389,91 @@
         </aside>
 
         <main class="app-content p-0">
-            <div class="container-fluid">
-                <div class="row justify-content-center mt-3">
-                    <div class="col-lg-7">
-                        <div class="custom-profile-card p-4 rounded-3 hover-item mt-4 border-0">
-                            <h5 class="text-info mb-3">Add New Service Area</h5>
-                            <form>
-                                <div class="row mb-3">
-                                    <div class="col-12">
-                                        <label class="form-label text-secondary small text-uppercase fw-bold">Service
-                                            Area</label>
-                                        <input type="text" class="form-control border" placeholder="Enter Service Area">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-6">
-                                        <label
-                                            class="form-label text-secondary small text-uppercase fw-bold">Region</label>
-                                        <input type="text" class="form-control border" placeholder="Region Name">
-                                    </div>
-                                    <div class="col-6">
-                                        <label class="form-label text-secondary small text-uppercase fw-bold">Station
-                                            Code</label>
-                                        <input type="text" class="form-control border" placeholder="Enter Station Code">
-                                    </div>
-                                </div>
+            <div class="container-fluid pt-3 mb-5">
 
-                                <!-- Date and Status Row -->
-                                <div class="row mb-3">
-                                    <div class="col-6">
-                                        <label class="form-label text-secondary small text-uppercase fw-bold">Effective
-                                            Date</label>
-                                        <input type="date" class="form-control border" value="2026-05-10">
-                                    </div>
-                                    <div class="col-6">
-                                        <label class="form-label text-secondary small text-uppercase fw-bold">Expiry
-                                            Date</label>
-                                        <input type="date" class="form-control border" value="2026-05-10">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-12">
-                                        <label
-                                            class="form-label text-secondary small text-uppercase fw-bold">Status</label>
-                                        <select class="form-select border bg-light-subtle"
-                                            aria-label="Default select example">
-                                            <option selected>Active</option>
-                                            <option value="1">Inactive</option>
-                                            <option value="1">Terminated</option>
+                <div class="row justify-content-center">
+                    <div class="col-md-7">
+                        <div class="custom-profile-card p-4 rounded-3 hover-item mt-4 border-0">
+                            <h5 class="text-info mb-3">Add New Fuel</h5>
+                            <form>
+
+                                <div class="row">
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="vehicle_select"
+                                            class="form-label text-secondary small fw-bold">Vehicle <span
+                                                class="text-danger">*</span></label>
+
+                                        <select class="select2-enable border-0" id="vehicle_select">
+                                            <option value=""></option>
+                                            <option value="1">Truck - DM-12-3456 (Odometer: 12,500 km)</option>
+                                            <option value="2">Pickup - CTG-55-9876 (Odometer: 45,200 km)</option>
+                                            <option value="3">Delivery Van - DM-11-2233 (Odometer: 8,150 km)</option>
+                                            <option value="4">Prime Mover - KHL-44-1122 (Odometer: 95,400 km)</option>
                                         </select>
                                     </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="driver_select" class="form-label text-secondary small fw-bold">Add
+                                            Driver <span class="text-danger">*</span></label>
+
+                                        <select class="select2-enable border-0" id="driver_select">
+                                            <option value=""></option>
+                                            <option value="1">Truck - DM-12-3456 (Odometer: 12,500 km)</option>
+                                            <option value="2">Pickup - CTG-55-9876 (Odometer: 45,200 km)</option>
+                                            <option value="3">Delivery Van - DM-11-2233 (Odometer: 8,150 km)</option>
+                                            <option value="4">Prime Mover - KHL-44-1122 (Odometer: 95,400 km)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="type_select" class="form-label text-secondary small fw-bold">Fuel
+                                            Type <span class="text-danger">*</span></label>
+
+                                        <select class="select2-enable border-0" id="type_select">
+                                            <option value=""></option>
+                                            <option value="1">Truck - DM-12-3456 (Odometer: 12,500 km)</option>
+                                            <option value="2">Pickup - CTG-55-9876 (Odometer: 45,200 km)</option>
+                                            <option value="3">Delivery Van - DM-11-2233 (Odometer: 8,150 km)</option>
+                                            <option value="4">Prime Mover - KHL-44-1122 (Odometer: 95,400 km)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">Date <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control border datepicker"
+                                            placeholder="Select Date">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">Quantity <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control border" placeholder="e.g 20">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">Odometer <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control border" placeholder="e.g 657495">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">Amount <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control border" placeholder="e.g 5000">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">Receipt #</label>
+                                        <input type="file" class="form-control border" placeholder="e.g, 123456">
+                                    </div>
+
+                                    <div class="col-md-12 mb-3">
+                                        <label
+                                            class="form-label text-secondary small text-uppercase fw-bold">Notes</label>
+                                        <textarea class="form-control border" rows="3"
+                                            placeholder="Optional notes..."></textarea>
+                                    </div>
                                 </div>
 
-                                <!-- Notes -->
-                                <div class="mb-4">
-                                    <label class="form-label text-secondary small text-uppercase fw-bold">Notes</label>
-                                    <textarea class="form-control border" rows="2"
-                                        placeholder="Optional notes..."></textarea>
-                                </div>
 
                                 <!-- Footer Buttons -->
-                                <div class="d-flex justify-content-end gap-2">
-                                    <a href="./csa-management.html"
-                                        class="btn btn-outline-danger rounded-pill px-4">Cancel</a>
+                                <div class="d-flex justify-content-end gap-2 mt-3">
+                                    <a href="./fuel.html" class="btn btn-outline-danger rounded-pill px-4">Cancel</a>
                                     <button type="submit" class="btn btn-info rounded-pill px-4 fw-bold">Save
                                         Changes</button>
                                 </div>
@@ -454,13 +483,36 @@
                 </div>
             </div>
         </main>
-
-
-
     </div>
+
+
     <script src="./assets/vendor/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/vendor/js/adminlte.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="./assets/app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.select2-enable').select2({
+                placeholder: "Select an Option",
+                allowClear: true,
+                width: '100%'
+            });
+        });
+    </script>
+
+    <script>
+        flatpickr(".datepicker", {
+            dateFormat: "M j, Y",
+            allowInput: true,
+            altInput: false,
+        });
+    </script>
+
 </body>
 
 </html>

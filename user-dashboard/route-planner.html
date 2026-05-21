@@ -10,11 +10,74 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="./assets/vendor/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/vendor/css/adminlte.min.css">
     <link rel="stylesheet" href="./assets/vendor/css/bs-icon/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./assets/vendor/css/remix-icon/remixicon.css">
     <link rel="stylesheet" href="./assets/style.css">
+
+    <style>
+        .custom-profile-card {
+            overflow: visible !important;
+        }
+
+        .suggestion-box {
+            position: absolute !important;
+            max-height: 220px;
+            overflow-y: auto;
+            background: #ffffff;
+            border: none !important;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 9999999 !important;
+            display: none;
+        }
+
+        .suggestion-item {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 8px 12px;
+            font-size: 14px;
+            color: #495057;
+            border-bottom: 1px solid #f1f3f5;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+
+        .suggestion-item:hover {
+            background-color: var(--primary-color, #21c45d);
+            color: #000;
+        }
+
+        .location-wrapper {
+            position: relative;
+        }
+
+        [data-bs-theme="dark"] .suggestion-box {
+            background: #343a40 !important;
+            border-color: #4b545c !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+        }
+
+        [data-bs-theme="dark"] .suggestion-box .suggestion-item {
+            background: transparent !important;
+            color: #fff !important;
+        }
+
+        [data-bs-theme="dark"] .suggestion-box .suggestion-item:hover {
+            background: var(--primary-color, #21c45d) !important;
+            color: #000 !important;
+        }
+    </style>
 </head>
 
 <body class="layout-fixed sidebar-expand-lg bg-body-tertiary app-loaded" data-new-gr-c-s-check-loaded="14.1290.0"
@@ -208,7 +271,7 @@
 
                             <li class="nav-header text-uppercase fw-bold mt-3">Intelligence</li>
                             <li class="nav-item">
-                                <a href="./route-planner.html" class="nav-link">
+                                <a href="./route-planner.html" class="nav-link active">
                                     <i class="nav-icon bi bi-globe-americas"></i>
                                     <p>Route</p>
                                 </a>
@@ -269,7 +332,7 @@
                 </a>
               </li> -->
                             <li class="nav-item">
-                                <a href="./csa-management.html" class="nav-link active">
+                                <a href="./csa-management.html" class="nav-link">
                                     <i class="nav-icon bi bi-folder"></i>
                                     <p>CSA Management</p>
                                 </a>
@@ -382,69 +445,68 @@
         </aside>
 
         <main class="app-content p-0">
-            <div class="container-fluid">
-                <div class="row justify-content-center mt-3">
-                    <div class="col-lg-7">
-                        <div class="custom-profile-card p-4 rounded-3 hover-item mt-4 border-0">
-                            <h5 class="text-info mb-3">Add New Service Area</h5>
-                            <form>
-                                <div class="row mb-3">
-                                    <div class="col-12">
-                                        <label class="form-label text-secondary small text-uppercase fw-bold">Service
-                                            Area</label>
-                                        <input type="text" class="form-control border" placeholder="Enter Service Area">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-6">
-                                        <label
-                                            class="form-label text-secondary small text-uppercase fw-bold">Region</label>
-                                        <input type="text" class="form-control border" placeholder="Region Name">
-                                    </div>
-                                    <div class="col-6">
-                                        <label class="form-label text-secondary small text-uppercase fw-bold">Station
-                                            Code</label>
-                                        <input type="text" class="form-control border" placeholder="Enter Station Code">
-                                    </div>
-                                </div>
+            <div class="container-fluid pt-3 mb-5">
 
-                                <!-- Date and Status Row -->
-                                <div class="row mb-3">
-                                    <div class="col-6">
-                                        <label class="form-label text-secondary small text-uppercase fw-bold">Effective
-                                            Date</label>
-                                        <input type="date" class="form-control border" value="2026-05-10">
-                                    </div>
-                                    <div class="col-6">
-                                        <label class="form-label text-secondary small text-uppercase fw-bold">Expiry
-                                            Date</label>
-                                        <input type="date" class="form-control border" value="2026-05-10">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-12">
-                                        <label
-                                            class="form-label text-secondary small text-uppercase fw-bold">Status</label>
-                                        <select class="form-select border bg-light-subtle"
-                                            aria-label="Default select example">
-                                            <option selected>Active</option>
-                                            <option value="1">Inactive</option>
-                                            <option value="1">Terminated</option>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="custom-profile-card p-4 rounded-3 hover-item mt-4 border-0">
+                            <h5 class="text-info mb-3"><i class="bi bi-truck me-2 text-info"></i>Trip Details</h5>
+                            <form id="route-planner-form">
+                                <div class="row">
+
+                                    <div class="col-md-12 mb-3">
+                                        <label for="vehicle_select"
+                                            class="form-label text-secondary small fw-bold">Select Vehicle</label>
+                                        <select class="select2-enable border-0" id="vehicle_select">
+                                            <option value=""></option>
+                                            <option value="1">Truck - DM-12-3456 (Odometer: 12,500 km)</option>
+                                            <option value="2">Pickup - CTG-55-9876 (Odometer: 45,200 km)</option>
+                                            <option value="3">Delivery Van - DM-11-2233 (Odometer: 8,150 km)</option>
+                                            <option value="4">Prime Mover - KHL-44-1122 (Odometer: 95,400 km)</option>
                                         </select>
                                     </div>
+
+                                    <div class="col-md-12 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">Start Location</label>
+                                        <div class="location-wrapper">
+                                            <input type="text" name="start_location"
+                                                class="form-control border geo-autocomplete"
+                                                placeholder="e.g, 123 Main St, New York, NY" autocomplete="off">
+                                            <div class="suggestion-box"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">Stops (Optional)</label>
+
+                                        <div class="location-wrapper mb-2">
+                                            <div class="input-group">
+                                                <input type="text" name="stops[]"
+                                                    class="form-control border geo-autocomplete stop-input"
+                                                    placeholder="e.g, 123 Main St, New York, NY" autocomplete="off">
+                                                <button class="btn btn-outline-info" type="button" id="add-stop-btn">+
+                                                    Add Stop</button>
+                                            </div>
+                                            <div class="suggestion-box"></div>
+                                        </div>
+
+                                        <div id="dynamic-stops-wrapper"></div>
+                                    </div>
+
+                                    <div class="col-md-12 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">End Location</label>
+                                        <div class="location-wrapper">
+                                            <input type="text" name="end_location"
+                                                class="form-control border geo-autocomplete"
+                                                placeholder="e.g, 123 Main St, New York, NY" autocomplete="off">
+                                            <div class="suggestion-box"></div>
+                                        </div>
+                                    </div>
+
                                 </div>
 
-                                <!-- Notes -->
-                                <div class="mb-4">
-                                    <label class="form-label text-secondary small text-uppercase fw-bold">Notes</label>
-                                    <textarea class="form-control border" rows="2"
-                                        placeholder="Optional notes..."></textarea>
-                                </div>
-
-                                <!-- Footer Buttons -->
-                                <div class="d-flex justify-content-end gap-2">
-                                    <a href="./csa-management.html"
-                                        class="btn btn-outline-danger rounded-pill px-4">Cancel</a>
+                                <div class="d-flex justify-content-end gap-2 mt-3">
+                                    <a href="./fuel.html" class="btn btn-outline-danger rounded-pill px-4">Cancel</a>
                                     <button type="submit" class="btn btn-info rounded-pill px-4 fw-bold">Save
                                         Changes</button>
                                 </div>
@@ -454,13 +516,125 @@
                 </div>
             </div>
         </main>
-
-
-
     </div>
+
+
     <script src="./assets/vendor/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/vendor/js/adminlte.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="./assets/app.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const addStopBtn = document.getElementById("add-stop-btn");
+            const stopsWrapper = document.getElementById("dynamic-stops-wrapper");
+            let stopCounter = 1;
+            let debounceTimer;
+
+            addStopBtn.addEventListener("click", function () {
+                stopCounter++;
+
+                const newStopRow = document.createElement("div");
+                newStopRow.className = "location-wrapper mb-2 dynamic-stop-item";
+                newStopRow.innerHTML = `
+            <div class="input-group">
+                <input type="text" name="stops[]" class="form-control border geo-autocomplete stop-input" placeholder="Stop ${stopCounter} (e.g, 123 Main St, New York, NY)" autocomplete="off">
+                <button class="btn btn-outline-danger remove-stop-btn" type="button">Remove</button>
+            </div>
+            <div class="suggestion-box"></div>
+        `;
+
+                newStopRow.querySelector(".remove-stop-btn").addEventListener("click", function () {
+                    newStopRow.remove();
+                    renamePlaceholders();
+                });
+
+                stopsWrapper.appendChild(newStopRow);
+            });
+
+            function renamePlaceholders() {
+                const dynamicInputs = stopsWrapper.querySelectorAll(".stop-input");
+                stopCounter = 1;
+                dynamicInputs.forEach((input) => {
+                    stopCounter++;
+                    input.placeholder = `Stop ${stopCounter} (e.g, 123 Main St, New York, NY)`;
+                });
+            }
+
+            document.addEventListener("input", function (e) {
+                if (e.target.classList.contains("geo-autocomplete")) {
+                    const inputField = e.target;
+                    const currentWrapper = inputField.closest(".location-wrapper");
+                    const suggestionBox = currentWrapper.querySelector(".suggestion-box");
+                    const query = inputField.value.trim();
+
+                    clearTimeout(debounceTimer);
+
+                    if (query.length < 3) {
+                        suggestionBox.innerHTML = "";
+                        suggestionBox.style.display = "none";
+                        return;
+                    }
+
+                    debounceTimer = setTimeout(() => {
+                        const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&limit=5&addressdetails=1`;
+
+                        fetch(url)
+                            .then(response => response.json())
+                            .then(data => {
+                                suggestionBox.innerHTML = "";
+
+                                if (data.length === 0) {
+                                    suggestionBox.style.display = "none";
+                                    return;
+                                }
+
+                                data.forEach(item => {
+                                    const btn = document.createElement("button");
+                                    btn.type = "button";
+                                    btn.className = "suggestion-item";
+                                    btn.innerText = item.display_name;
+
+                                    btn.addEventListener("click", function () {
+                                        inputField.value = item.display_name;
+                                        inputField.dataset.lat = item.lat;
+                                        inputField.dataset.lng = item.lon;
+
+                                        suggestionBox.innerHTML = "";
+                                        suggestionBox.style.display = "none";
+                                    });
+
+                                    suggestionBox.appendChild(btn);
+                                });
+
+                                const inputRect = inputField.getBoundingClientRect();
+                                const wrapperRect = currentWrapper.getBoundingClientRect();
+
+                                suggestionBox.style.top = (inputRect.bottom - wrapperRect.top) + "px";
+                                suggestionBox.style.left = (inputRect.left - wrapperRect.left) + "px";
+                                suggestionBox.style.width = inputRect.width + "px";
+
+                                suggestionBox.style.display = "block";
+                            })
+                            .catch(err => console.error("Geocoding Error:", err));
+                    }, 250);
+                }
+            });
+
+            document.addEventListener("click", function (e) {
+                if (!e.target.classList.contains("geo-autocomplete") && !e.target.classList.contains("suggestion-item")) {
+                    document.querySelectorAll(".suggestion-box").forEach(box => {
+                        box.style.display = "none";
+                    });
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>

@@ -169,6 +169,12 @@
                                     <p>Overview</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="./fleet.html" class="nav-link active">
+                                    <i class="nav-icon bi bi-truck"></i>
+                                    <p>Fleet</p>
+                                </a>
+                            </li>
                             <!-- <li class="nav-item">
                 <a href="./command-center.html" class="nav-link">
                   <i class="nav-icon bi bi-broadcast-pin"></i>
@@ -182,9 +188,15 @@
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a href="./attendance.html" class="nav-link">
+                                    <i class="nav-icon bi bi-person-check fs-5"></i>
+                                    <p>Attendance</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="./my-schedule.html" class="nav-link">
                                     <i class="nav-icon bi bi-calendar-event"></i>
-                                    <p>My Schedule</p>
+                                    <p>Schedule</p>
                                 </a>
                             </li>
                             <!-- <li class="nav-item">
@@ -193,26 +205,33 @@
                   <p>Route Map</p>
                 </a>
               </li> -->
-                            <li class="nav-item">
-                                <a href="./fleet.html" class="nav-link active">
-                                    <i class="nav-icon bi bi-truck"></i>
-                                    <p>Fleet</p>
-                                </a>
-                            </li>
+
 
                             <li class="nav-header text-uppercase fw-bold mt-3">Intelligence</li>
+                            <li class="nav-item">
+                                <a href="./route-planner.html" class="nav-link">
+                                    <i class="nav-icon bi bi-globe-americas"></i>
+                                    <p>Route</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./fuel.html" class="nav-link">
+                                    <i class="nav-icon ri-gas-station-fill fs-5"></i>
+                                    <p>Fuel</p>
+                                </a>
+                            </li>
                             <!-- <li class="nav-item">
                 <a href="./routealizer.html" class="nav-link">
                   <i class="nav-icon bi bi-globe-americas"></i>
                   <p>Routealizer</p>
                 </a>
               </li> -->
-                            <li class="nav-item">
-                                <a href="./in-focus.html" class="nav-link">
-                                    <i class="nav-icon bi bi-cpu"></i>
-                                    <p>InFocus</p>
-                                </a>
-                            </li>
+                            <!-- <li class="nav-item">
+                <a href="./in-focus.html" class="nav-link">
+                  <i class="nav-icon bi bi-cpu"></i>
+                  <p>InFocus</p>
+                </a>
+              </li> -->
 
                             <li class="nav-header text-uppercase fw-bold mt-3">Finance</li>
                             <!-- <li class="nav-item">
@@ -227,15 +246,15 @@
                   <p>Payroll</p>
                 </a>
               </li> -->
-                            <li class="nav-item">
-                                <a href="./weekly-sheets.html" class="nav-link">
-                                    <i class="nav-icon bi bi-clipboard-check"></i>
-                                    <p>
-                                        Weekly Sheets
-                                    </p>
-                                    <span class="navbar-badge badge text-bg-warning">1</span>
-                                </a>
-                            </li>
+                            <!-- <li class="nav-item">
+                <a href="./weekly-sheets.html" class="nav-link">
+                  <i class="nav-icon bi bi-clipboard-check"></i>
+                  <p>
+                    Weekly Sheets
+                  </p>
+                  <span class="navbar-badge badge text-bg-warning">1</span>
+                </a>
+              </li> -->
                             <li class="nav-item">
                                 <a href="./charge-statements.html" class="nav-link">
                                     <i class="nav-icon bi bi-file-earmark-text"></i>
@@ -364,95 +383,100 @@
         </aside>
 
         <main class="app-content p-0">
-            <div class="container-fluid pt-3 my-3">
+            <div class="container-fluid pt-3 mb-5">
 
-                <div class="custom-profile-card p-4 rounded-3 hover-item mt-4 border-0">
-                    <h5 class="text-info mb-3">Create New Vehicle</h5>
-                    <form>
+                <div class="row justify-content-center">
+                    <div class="col-md-7">
+                        <div class="custom-profile-card p-4 rounded-3 hover-item mt-4 border-0">
+                            <h5 class="text-info mb-3">Create New Vehicle</h5>
+                            <form>
 
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label text-secondary small fw-bold">FedEx
-                                    Unit</label>
-                                <input type="text" class="form-control border" placeholder="e.g, 126465">
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label text-secondary small fw-bold">Ownership</label>
-                                <select class="form-select custom-input-dark border bg-light-subtle">
-                                    <option selected disabled>Select Ownership</option>
-                                    <option>Schedule B (Owner)</option>
-                                    <option>Rental</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label text-secondary small fw-bold">Type</label>
-                                <select class="form-select custom-input-dark border bg-light-subtle">
-                                    <option selected disabled>Select Type</option>
-                                    <option>Step Van</option>
-                                    <option>Cargo Van</option>
-                                    <option>Box Truck</option>
-                                    <option>Sprinter</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label text-secondary small fw-bold">Current
-                                    Mileage</label>
-                                <input type="number" class="form-control border" placeholder="e.g, 126465">
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label text-secondary small fw-bold">Year</label>
-                                <input type="number" class="form-control border" placeholder="e.g, 2020">
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label text-secondary small fw-bold">Make</label>
-                                <input type="text" class="form-control border" placeholder="e.g, Toyota">
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label text-secondary small fw-bold">Model</label>
-                                <input type="text" class="form-control border" placeholder="e.g, Camry">
-                            </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">FedEx
+                                            Unit</label>
+                                        <input type="text" class="form-control border" placeholder="e.g, 126465">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">Ownership</label>
+                                        <select class="form-select custom-input-dark border bg-light-subtle">
+                                            <option selected disabled>Select Ownership</option>
+                                            <option>Schedule B (Owner)</option>
+                                            <option>Rental</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">Type</label>
+                                        <select class="form-select custom-input-dark border bg-light-subtle">
+                                            <option selected disabled>Select Type</option>
+                                            <option>Step Van</option>
+                                            <option>Cargo Van</option>
+                                            <option>Box Truck</option>
+                                            <option>Sprinter</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">Current
+                                            Mileage</label>
+                                        <input type="number" class="form-control border" placeholder="e.g, 126465">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">Year</label>
+                                        <input type="number" class="form-control border" placeholder="e.g, 2020">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">Make</label>
+                                        <input type="text" class="form-control border" placeholder="e.g, Toyota">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">Model</label>
+                                        <input type="text" class="form-control border" placeholder="e.g, Camry">
+                                    </div>
 
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label text-secondary small fw-bold">Fuel Type</label>
-                                <select class="form-select custom-input-dark border bg-light-subtle">
-                                    <option selected disabled>Select Type</option>
-                                    <option>Diesel</option>
-                                    <option>Gasoline</option>
-                                    <option>CNG</option>
-                                    <option>Electric</option>
-                                </select>
-                            </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">Fuel Type</label>
+                                        <select class="form-select custom-input-dark border bg-light-subtle">
+                                            <option selected disabled>Select Type</option>
+                                            <option>Diesel</option>
+                                            <option>Gasoline</option>
+                                            <option>CNG</option>
+                                            <option>Electric</option>
+                                        </select>
+                                    </div>
 
-                            <div class="col-md-12 mb-3">
-                                <label class="form-label text-secondary small fw-bold">VIN</label>
-                                <input type="text" class="form-control border" placeholder="e.g, 123456">
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label text-secondary small fw-bold">License Plate</label>
-                                <input type="text" class="form-control border" placeholder="e.g, 123456">
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label text-secondary small fw-bold">Cube Capacity (cu
-                                    ft)</label>
-                                <input type="text" class="form-control border" placeholder="e.g, 123456">
-                            </div>
+                                    <div class="col-md-12 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">VIN</label>
+                                        <input type="text" class="form-control border" placeholder="e.g, 123456">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">License Plate</label>
+                                        <input type="text" class="form-control border" placeholder="e.g, 123456">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">Cube Capacity (cu
+                                            ft)</label>
+                                        <input type="text" class="form-control border" placeholder="e.g, 123456">
+                                    </div>
 
-                            <div class="col-md-12 mb-3">
-                                <label class="form-label text-secondary small text-uppercase fw-bold">Notes</label>
-                                <textarea class="form-control border" rows="4"
-                                    placeholder="Optional notes..."></textarea>
-                            </div>
+                                    <div class="col-md-12 mb-3">
+                                        <label
+                                            class="form-label text-secondary small text-uppercase fw-bold">Notes</label>
+                                        <textarea class="form-control border" rows="4"
+                                            placeholder="Optional notes..."></textarea>
+                                    </div>
+                                </div>
+
+
+                                <!-- Footer Buttons -->
+                                <div class="d-flex justify-content-end gap-2 mt-3">
+                                    <a href="./fleet.html" class="btn btn-outline-danger rounded-pill px-4">Cancel</a>
+                                    <button type="submit" class="btn btn-info rounded-pill px-4 fw-bold">Save
+                                        Changes</button>
+                                </div>
+                            </form>
                         </div>
-
-
-                        <!-- Footer Buttons -->
-                        <div class="d-flex justify-content-end gap-2 mt-3">
-                            <a href="./fleet.html" class="btn btn-outline-danger rounded-pill px-4">Cancel</a>
-                            <button type="submit" class="btn btn-info rounded-pill px-4 fw-bold">Save
-                                Changes</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </main>
