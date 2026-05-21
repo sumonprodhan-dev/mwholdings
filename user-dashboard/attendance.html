@@ -400,7 +400,8 @@
                             <form method="GET" action="#" class="d-flex align-items-center gap-2" id="dateFilterForm">
                                 <div class="input-group">
                                     <label for="selectDate">
-                                        <span class="input-group-text bg-light-subtle border border-end-0" style="border-radius: 5px 0px 0px 5px;">
+                                        <span class="input-group-text bg-light-subtle border border-end-0"
+                                            style="border-radius: 5px 0px 0px 5px;">
                                             <i class="bi bi-calendar3 text-secondary"></i>
                                         </span>
                                     </label>
@@ -446,7 +447,7 @@
                                             <div class="d-flex align-items-center gap-3">
                                                 <div class="avatar-circle">JD</div>
                                                 <div>
-                                                    <h6 class="mb-0 fw-semibold text-secondary">Jon Doe</h6>
+                                                    <h6 class="mb-0 fw-semibold">Jon Doe</h6>
                                                     <small class="text-muted">ID: DRV-001</small>
                                                 </div>
                                             </div>
@@ -458,29 +459,30 @@
                                         </td>
                                         <td>
                                             <div class="status-btn-group d-flex justify-content-center gap-2">
-                                                <input type="radio" class="btn-check status-present" id="status_p_1"
-                                                    value="present" checked>
+                                                <input type="radio" class="btn-check status-present"
+                                                    name="attendance[1][status]" id="status_p_1" value="present"
+                                                    checked>
                                                 <label class="btn btn-outline-info btn-status"
                                                     for="status_p_1">Present</label>
 
-                                                <input type="radio" class="btn-check status-absent" id="status_a_1"
-                                                    value="absent">
+                                                <input type="radio" class="btn-check status-absent"
+                                                    name="attendance[1][status]" id="status_a_1" value="absent">
                                                 <label class="btn btn-outline-danger btn-status"
                                                     for="status_a_1">Absent</label>
 
-                                                <input type="radio" class="btn-check status-leave" id="status_l_1"
-                                                    value="leave">
+                                                <input type="radio" class="btn-check status-leave"
+                                                    name="attendance[1][status]" id="status_l_1" value="leave">
                                                 <label class="btn btn-outline-warning btn-status"
                                                     for="status_l_1">Leave</label>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="d-flex align-items-center gap-2">
-                                                <input type="time"
+                                                <input type="time" name="attendance[1][check_in]"
                                                     class="form-control form-control-sm border time-input"
                                                     value="09:00">
                                                 <span class="text-muted small">to</span>
-                                                <input type="time"
+                                                <input type="time" name="attendance[1][check_out]"
                                                     class="form-control form-control-sm border time-input"
                                                     value="17:00">
                                             </div>
@@ -493,7 +495,7 @@
                                             <div class="d-flex align-items-center gap-3">
                                                 <div class="avatar-circle">RK</div>
                                                 <div>
-                                                    <h6 class="mb-0 fw-semibold text-secondary">Rahat Khan</h6>
+                                                    <h6 class="mb-0 fw-semibold">Rahat Khan</h6>
                                                     <small class="text-muted">ID: DRV-002</small>
                                                 </div>
                                             </div>
@@ -505,31 +507,29 @@
                                         </td>
                                         <td>
                                             <div class="status-btn-group d-flex justify-content-center gap-2">
-                                                <input type="radio" class="btn-check status-present" id="status_p_2"
-                                                    value="present">
+                                                <input type="radio" class="btn-check status-present"
+                                                    name="attendance[2][status]" id="status_p_2" value="present">
                                                 <label class="btn btn-outline-info btn-status"
                                                     for="status_p_2">Present</label>
 
-                                                <input type="radio" class="btn-check status-absent" id="status_a_2"
-                                                    value="absent" checked>
+                                                <input type="radio" class="btn-check status-absent"
+                                                    name="attendance[2][status]" id="status_a_2" value="absent" checked>
                                                 <label class="btn btn-outline-danger btn-status"
                                                     for="status_a_2">Absent</label>
 
-                                                <input type="radio" class="btn-check status-leave" id="status_l_2"
-                                                    value="leave">
+                                                <input type="radio" class="btn-check status-leave"
+                                                    name="attendance[2][status]" id="status_l_2" value="leave">
                                                 <label class="btn btn-outline-warning btn-status"
                                                     for="status_l_2">Leave</label>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="d-flex align-items-center gap-2">
-                                                <input type="time"
-                                                    class="form-control form-control-sm border time-input"
-                                                    value="">
+                                                <input type="time" name="attendance[2][check_in]"
+                                                    class="form-control form-control-sm border time-input" value="">
                                                 <span class="text-muted small">to</span>
-                                                <input type="time"
-                                                    class="form-control form-control-sm border time-input"
-                                                    value="">
+                                                <input type="time" name="attendance[2][check_out]"
+                                                    class="form-control form-control-sm border time-input" value="">
                                             </div>
                                         </td>
                                     </tr>
