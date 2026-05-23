@@ -172,6 +172,12 @@
                   <p>Fleet</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="./rental.html" class="nav-link">
+                  <i class="nav-icon bi bi-building-gear"></i>
+                  <p>Rental</p>
+                </a>
+              </li>
               <!-- <li class="nav-item">
                 <a href="./command-center.html" class="nav-link">
                   <i class="nav-icon bi bi-broadcast-pin"></i>
@@ -347,9 +353,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./account.html" class="nav-link">
+                <a href="./account.html" class="nav-link active">
                   <i class="nav-icon bi bi-people"></i>
-                  <p>Account & Users</p>
+                  <p>Account</p>
                 </a>
               </li>
             </ul>
@@ -382,48 +388,96 @@
 
     <main class="app-content p-0">
       <div class="container-fluid">
-        <div class="row g-4 mt-4 justify-content-center">
+        <div class="row g-4 mt-4 justify-content-center mb-5">
           <div class="col-lg-8">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
-                  <div class="bg-info" style="height: 120px;"></div>
-                  <div class="card-body p-4 pt-0">
-                    <div class="d-flex align-items-end gap-3 mb-4" style="margin-top: -40px;">
-                      <div class="bg-white p-1 rounded-circle">
-                        <div
-                          class="bg-light rounded-circle d-flex align-items-center justify-content-center fw-bold text-info"
-                          style="width: 100px; height: 100px; font-size: 40px; border: 4px solid white;">
-                          U
-                        </div>
-                      </div>
-                      <div class="pb-2">
-                        <h4 class="fw-bold m-0">User Name</h4>
-                      </div>
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+              <div class="bg-info" style="height: 120px;"></div>
+              <div class="card-body p-4 pt-0">
+                <div class="d-flex align-items-end gap-3 mb-4" style="margin-top: -40px;">
+                  <div class="bg-white p-1 rounded-circle">
+                    <div
+                      class="bg-light rounded-circle d-flex align-items-center justify-content-center fw-bold text-info"
+                      style="width: 100px; height: 100px; font-size: 40px; border: 4px solid white;">
+                      U
                     </div>
+                  </div>
+                  <div class="pb-2">
+                    <h4 class="fw-bold m-0">User Name</h4>
+                  </div>
+                </div>
 
-                    <div class="row g-4">
-                      <div class="col-md-12">
-                        <label for="image">Profile Picture</label>
-                        <input type="file" class="form-control" id="image">
-                      </div>
-                      <div class="col-md-6">
-                        <label class="form-label small fw-bold">Display Name</label>
-                        <input type="text" class="form-control" value="User Name">
-                      </div>
-                      <div class="col-md-6">
-                        <label class="form-label small fw-bold">Email Address</label>
-                        <input type="email" class="form-control"
-                          value="user@email.com">
-                      </div>
-                      <div class="col-md-6">
-                        <label class="form-label small fw-bold">Phone Number</label>
-                        <input type="tel" class="form-control" value="+65 XXXX XXXX">
-                      </div>
-                      <div class="col-12 d-flex justify-content-end">
-                        <button class="btn btn-info rounded-pill px-4">Save Changes</button>
-                      </div>
+                <div class="row g-4">
+                  <div class="col-md-12">
+                    <label for="image">Profile Picture</label>
+                    <input type="file" class="form-control border" id="image">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">Display Name</label>
+                    <input type="text" class="form-control border" value="User Name">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">Email Address</label>
+                    <input type="email" class="form-control border" value="user@email.com">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">Phone Number</label>
+                    <input type="tel" class="form-control border" value="+65 XXXX XXXX">
+                  </div>
+                  <div class="col-12 d-flex justify-content-end">
+                    <button class="btn btn-info rounded-pill px-4">Save Changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+            <!-- change password -->
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-end gap-3 mb-4">
+                  <h4 class="fw-bold m-0"><i class="bi bi-key-fill text-info me-2"></i>Change Password</h4>
+                </div>
+
+                <div class="row g-4">
+                  <!-- Current Password -->
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">Current Password</label>
+                    <div class="input-group">
+                      <input type="password" class="form-control border border-end-0 toggle-password-input"
+                        placeholder="Enter current password">
+                      <button class="btn btn-outline-secondary border border-start-0 toggle-password-btn" type="button">
+                        <i class="bi bi-eye-slash"></i>
+                      </button>
                     </div>
+                  </div>
+
+                  <!-- New Password -->
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">New Password</label>
+                    <div class="input-group">
+                      <input type="password" class="form-control border border-end-0 toggle-password-input"
+                        placeholder="Enter new password">
+                      <button class="btn btn-outline-secondary border border-start-0 toggle-password-btn" type="button">
+                        <i class="bi bi-eye-slash"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Confirm Password -->
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">Confirm Password</label>
+                    <div class="input-group">
+                      <input type="password" class="form-control border border-end-0 toggle-password-input"
+                        placeholder="Confirm new password">
+                      <button class="btn btn-outline-secondary border border-start-0 toggle-password-btn" type="button">
+                        <i class="bi bi-eye-slash"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="col-12 d-flex justify-content-end">
+                    <button class="btn btn-info rounded-pill px-4">Update Password</button>
                   </div>
                 </div>
               </div>
@@ -436,6 +490,24 @@
   <script src="./assets/vendor/js/bootstrap.bundle.min.js"></script>
   <script src="./assets/vendor/js/adminlte.min.js"></script>
   <script src="./assets/app.js"></script>
+  <script>
+    document.querySelectorAll('.toggle-password-btn').forEach(button => {
+      button.addEventListener('click', function () {
+        const input = this.closest('.input-group').querySelector('.toggle-password-input');
+        const icon = this.querySelector('i');
+
+        if (input.type === 'password') {
+          input.type = 'text';
+          icon.classList.remove('bi-eye-slash');
+          icon.classList.add('bi-eye');
+        } else {
+          input.type = 'password';
+          icon.classList.remove('bi-eye');
+          icon.classList.add('bi-eye-slash');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

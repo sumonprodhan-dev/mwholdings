@@ -19,9 +19,6 @@
     <link rel="stylesheet" href="./assets/vendor/css/remix-icon/remixicon.css">
     <link rel="stylesheet" href="./assets/style.css">
 
-    <style>
-
-    </style>
 </head>
 
 <body class="layout-fixed sidebar-expand-lg bg-body-tertiary app-loaded" data-new-gr-c-s-check-loaded="14.1290.0"
@@ -182,7 +179,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./rental.html" class="nav-link">
+                                <a href="./rental.html" class="nav-link active">
                                     <i class="nav-icon bi bi-building-gear"></i>
                                     <p>Rental</p>
                                 </a>
@@ -227,7 +224,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./fuel.html" class="nav-link active">
+                                <a href="./fuel.html" class="nav-link">
                                     <i class="nav-icon ri-gas-station-fill fs-5"></i>
                                     <p>Fuel</p>
                                 </a>
@@ -362,7 +359,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./account.html" class="nav-link active">
+                                <a href="./account.html" class="nav-link">
                                     <i class="nav-icon bi bi-people"></i>
                                     <p>Account</p>
                                 </a>
@@ -400,90 +397,56 @@
                 <div class="row justify-content-center">
                     <div class="col-md-7">
                         <div class="custom-profile-card p-4 rounded-3 hover-item mt-4 border-0">
-                            <h5 class="text-info mb-3">Edit Fuel</h5>
+                            <h5 class="text-info mb-3">Add New Vendor Info</h5>
                             <form>
 
                                 <div class="row">
-
                                     <div class="col-md-6 mb-3">
-                                        <label for="vehicle_select"
-                                            class="form-label text-secondary small fw-bold">Vehicle <span
+                                        <label class="form-label text-secondary small fw-bold">Vendor Name <span
                                                 class="text-danger">*</span></label>
-
-                                        <select class="select2-enable border-0" id="vehicle_select">
-                                            <option value=""></option>
-                                            <option value="1">Truck - DM-12-3456 (Odometer: 12,500 km)</option>
-                                            <option value="2">Pickup - CTG-55-9876 (Odometer: 45,200 km)</option>
-                                            <option value="3">Delivery Van - DM-11-2233 (Odometer: 8,150 km)</option>
-                                            <option value="4">Prime Mover - KHL-44-1122 (Odometer: 95,400 km)</option>
-                                        </select>
+                                        <input type="text" class="form-control border" placeholder="e.g, Jone Doe">
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label for="driver_select" class="form-label text-secondary small fw-bold">Add
-                                            Driver <span class="text-danger">*</span></label>
-
-                                        <select class="select2-enable border-0" id="driver_select">
-                                            <option value=""></option>
-                                            <option value="1">Truck - DM-12-3456 (Odometer: 12,500 km)</option>
-                                            <option value="2">Pickup - CTG-55-9876 (Odometer: 45,200 km)</option>
-                                            <option value="3">Delivery Van - DM-11-2233 (Odometer: 8,150 km)</option>
-                                            <option value="4">Prime Mover - KHL-44-1122 (Odometer: 95,400 km)</option>
-                                        </select>
+                                        <label class="form-label text-secondary small fw-bold">Contact Person <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control border" placeholder="e.g, Jone Doe">
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label for="type_select" class="form-label text-secondary small fw-bold">Fuel
-                                            Type <span class="text-danger">*</span></label>
-
-                                        <select class="select2-enable border-0" id="type_select">
-                                            <option value=""></option>
-                                            <option value="1">Truck - DM-12-3456 (Odometer: 12,500 km)</option>
-                                            <option value="2">Pickup - CTG-55-9876 (Odometer: 45,200 km)</option>
-                                            <option value="3">Delivery Van - DM-11-2233 (Odometer: 8,150 km)</option>
-                                            <option value="4">Prime Mover - KHL-44-1122 (Odometer: 95,400 km)</option>
-                                        </select>
+                                        <label class="form-label text-secondary small fw-bold">Mobile Number <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control border" placeholder="e.g, +123456789">
                                     </div>
+
                                     <div class="col-md-6 mb-3">
-                                        <label class="form-label text-secondary small fw-bold">Date <span
+                                        <label class="form-label text-secondary small fw-bold">Date of Contract <span
                                                 class="text-danger">*</span></label>
                                         <input type="text" class="form-control border datepicker"
                                             placeholder="Select Date">
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label class="form-label text-secondary small fw-bold">Quantity <span
+                                        <label class="form-label text-secondary small fw-bold">Status <span
                                                 class="text-danger">*</span></label>
-                                        <input type="text" class="form-control border" placeholder="e.g 20">
+                                        <select class="form-select custom-input-dark border bg-light-subtle">
+                                            <option selected>Active</option>
+                                            <option value="0">Inactive</option>
+                                        </select>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label class="form-label text-secondary small fw-bold">Odometer <span
+                                        <label class="form-label text-secondary small fw-bold">Address <span
                                                 class="text-danger">*</span></label>
-                                        <input type="text" class="form-control border" placeholder="e.g 657495">
+                                        <input type="text" class="form-control border" placeholder="e.g, 123 Main St">
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label class="form-label text-secondary small fw-bold">Amount <span
+                                        <label class="form-label text-secondary small fw-bold">Contract Document<span
                                                 class="text-danger">*</span></label>
-                                        <input type="text" class="form-control border" placeholder="e.g 5000">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label class="form-label text-secondary small fw-bold">Receipt #</label>
-                                        <input type="file" class="form-control border" placeholder="e.g, 123456">
-                                        <div>
-                                            <img src="./assets/images/res.png" alt="receipt" class="mt-3 rounded"
-                                                style="width: 100px; height: 100px">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-12 mb-3">
-                                        <label
-                                            class="form-label text-secondary small text-uppercase fw-bold">Notes</label>
-                                        <textarea class="form-control border" rows="3"
-                                            placeholder="Optional notes..."></textarea>
+                                        <input type="file" class="form-control border" accept="image/*">
                                     </div>
                                 </div>
 
 
                                 <!-- Footer Buttons -->
                                 <div class="d-flex justify-content-end gap-2 mt-3">
-                                    <a href="./fuel.html" class="btn btn-outline-danger rounded-pill px-4">Cancel</a>
+                                    <a href="./rental.html" class="btn btn-outline-danger rounded-pill px-4">Cancel</a>
                                     <button type="submit" class="btn btn-info rounded-pill px-4 fw-bold">Save
                                         Changes</button>
                                 </div>
@@ -494,8 +457,6 @@
             </div>
         </main>
     </div>
-
-
     <script src="./assets/vendor/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/vendor/js/adminlte.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -504,7 +465,6 @@
     <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="./assets/app.js"></script>
-
 </body>
 
 </html>

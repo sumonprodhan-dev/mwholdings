@@ -11,11 +11,14 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="./assets/vendor/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/vendor/css/adminlte.min.css">
     <link rel="stylesheet" href="./assets/vendor/css/bs-icon/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./assets/vendor/css/remix-icon/remixicon.css">
     <link rel="stylesheet" href="./assets/style.css">
+
 </head>
 
 <body class="layout-fixed sidebar-expand-lg bg-body-tertiary app-loaded" data-new-gr-c-s-check-loaded="14.1290.0"
@@ -173,6 +176,12 @@
                                 <a href="./fleet.html" class="nav-link active">
                                     <i class="nav-icon bi bi-truck"></i>
                                     <p>Fleet</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./rental.html" class="nav-link">
+                                    <i class="nav-icon bi bi-building-gear"></i>
+                                    <p>Rental</p>
                                 </a>
                             </li>
                             <!-- <li class="nav-item">
@@ -352,7 +361,7 @@
                             <li class="nav-item">
                                 <a href="./account.html" class="nav-link">
                                     <i class="nav-icon bi bi-people"></i>
-                                    <p>Account & Users</p>
+                                    <p>Account</p>
                                 </a>
                             </li>
                         </ul>
@@ -397,14 +406,36 @@
                                             Unit</label>
                                         <input type="text" class="form-control border" placeholder="e.g, 126465">
                                     </div>
-                                    <div class="col-md-6 mb-3">
+                                    <!-- <div class="col-md-6 mb-3">
                                         <label class="form-label text-secondary small fw-bold">Ownership</label>
                                         <select class="form-select custom-input-dark border bg-light-subtle">
                                             <option selected disabled>Select Ownership</option>
                                             <option>Schedule B (Owner)</option>
                                             <option>Rental</option>
                                         </select>
+                                    </div> -->
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label text-secondary small fw-bold">Ownership</label>
+                                        <select class="form-select custom-input-dark border bg-light-subtle"
+                                            id="ownershipSelect">
+                                            <option selected disabled>Select Ownership</option>
+                                            <option value="owner">Schedule B (Owner)</option>
+                                            <option value="rental">Rental</option>
+                                        </select>
                                     </div>
+
+                                    <div class="col-md-6 mb-3 d-none" id="rentalCompanyField">
+                                        <label class="form-label text-secondary small fw-bold">Rental Provider</label>
+                                        <select class="select2-enable border-0">
+                                            <option value=""></option>
+                                            <option value="enterprise">Enterprise Rent-A-Car</option>
+                                            <option value="hertz">Hertz</option>
+                                            <option value="avis">Avis</option>
+                                            <option value="other">Other Provider</option>
+                                        </select>
+                                    </div>
+
+
                                     <div class="col-md-6 mb-3">
                                         <label class="form-label text-secondary small fw-bold">Type</label>
                                         <select class="form-select custom-input-dark border bg-light-subtle">
@@ -445,7 +476,7 @@
                                         </select>
                                     </div>
 
-                                    <div class="col-md-12 mb-3">
+                                    <div class="col-md-6 mb-3">
                                         <label class="form-label text-secondary small fw-bold">VIN</label>
                                         <input type="text" class="form-control border" placeholder="e.g, 123456">
                                     </div>
@@ -462,7 +493,7 @@
                                     <div class="col-md-12 mb-3">
                                         <label
                                             class="form-label text-secondary small text-uppercase fw-bold">Notes</label>
-                                        <textarea class="form-control border" rows="4"
+                                        <textarea class="form-control border" rows="3"
                                             placeholder="Optional notes..."></textarea>
                                     </div>
                                 </div>
@@ -484,8 +515,22 @@
     <script src="./assets/vendor/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/vendor/js/adminlte.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="./assets/app.js"></script>
+    <script>
+        document.getElementById('ownershipSelect').addEventListener('change', function () {
+            const rentalField = document.getElementById('rentalCompanyField');
+
+            if (this.value === 'rental') {
+                rentalField.classList.remove('d-none');
+            } else {
+                rentalField.classList.add('d-none');
+            }
+        });
+    </script>
 </body>
 
 </html>

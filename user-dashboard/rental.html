@@ -11,16 +11,26 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="./assets/vendor/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/vendor/css/adminlte.min.css">
     <link rel="stylesheet" href="./assets/vendor/css/bs-icon/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./assets/vendor/css/remix-icon/remixicon.css">
     <link rel="stylesheet" href="./assets/style.css">
-
     <style>
+        .dt-buttons .btn {
+            background-image: none !important;
+            background-color: var(--bs-btn-bg) !important;
+            border: var(--bs-btn-border-width) solid var(--bs-btn-border-color) !important;
+            color: var(--bs-btn-color) !important;
+            box-shadow: none !important;
+        }
 
+        .dt-buttons .btn:hover {
+            background-color: var(--bs-btn-hover-bg) !important;
+            border-color: var(--bs-btn-hover-border-color) !important;
+            color: var(--bs-btn-hover-color) !important;
+        }
     </style>
 </head>
 
@@ -182,7 +192,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./rental.html" class="nav-link">
+                                <a href="./rental.html" class="nav-link active">
                                     <i class="nav-icon bi bi-building-gear"></i>
                                     <p>Rental</p>
                                 </a>
@@ -227,7 +237,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./fuel.html" class="nav-link active">
+                                <a href="./fuel.html" class="nav-link">
                                     <i class="nav-icon ri-gas-station-fill fs-5"></i>
                                     <p>Fuel</p>
                                 </a>
@@ -362,7 +372,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./account.html" class="nav-link active">
+                                <a href="./account.html" class="nav-link">
                                     <i class="nav-icon bi bi-people"></i>
                                     <p>Account</p>
                                 </a>
@@ -395,116 +405,80 @@
         </aside>
 
         <main class="app-content p-0">
-            <div class="container-fluid pt-3 mb-5">
+            <div class="container-fluid pt-3 my-3">
 
-                <div class="row justify-content-center">
-                    <div class="col-md-7">
-                        <div class="custom-profile-card p-4 rounded-3 hover-item mt-4 border-0">
-                            <h5 class="text-info mb-3">Edit Fuel</h5>
-                            <form>
+                <div class=" d-flex align-items-center justify-content-between">
+                    <div id="tableButtons"></div>
+                    <a href="./rental-create.html" class="btn btn-info fw-bold"><i
+                            class="bi bi-plus-circle me-2"></i>Add Rental</a>
+                </div>
+                
+                <div class="custom-profile-card p-3 rounded-3 hover-item mt-4">
 
-                                <div class="row">
-
-                                    <div class="col-md-6 mb-3">
-                                        <label for="vehicle_select"
-                                            class="form-label text-secondary small fw-bold">Vehicle <span
-                                                class="text-danger">*</span></label>
-
-                                        <select class="select2-enable border-0" id="vehicle_select">
-                                            <option value=""></option>
-                                            <option value="1">Truck - DM-12-3456 (Odometer: 12,500 km)</option>
-                                            <option value="2">Pickup - CTG-55-9876 (Odometer: 45,200 km)</option>
-                                            <option value="3">Delivery Van - DM-11-2233 (Odometer: 8,150 km)</option>
-                                            <option value="4">Prime Mover - KHL-44-1122 (Odometer: 95,400 km)</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="driver_select" class="form-label text-secondary small fw-bold">Add
-                                            Driver <span class="text-danger">*</span></label>
-
-                                        <select class="select2-enable border-0" id="driver_select">
-                                            <option value=""></option>
-                                            <option value="1">Truck - DM-12-3456 (Odometer: 12,500 km)</option>
-                                            <option value="2">Pickup - CTG-55-9876 (Odometer: 45,200 km)</option>
-                                            <option value="3">Delivery Van - DM-11-2233 (Odometer: 8,150 km)</option>
-                                            <option value="4">Prime Mover - KHL-44-1122 (Odometer: 95,400 km)</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="type_select" class="form-label text-secondary small fw-bold">Fuel
-                                            Type <span class="text-danger">*</span></label>
-
-                                        <select class="select2-enable border-0" id="type_select">
-                                            <option value=""></option>
-                                            <option value="1">Truck - DM-12-3456 (Odometer: 12,500 km)</option>
-                                            <option value="2">Pickup - CTG-55-9876 (Odometer: 45,200 km)</option>
-                                            <option value="3">Delivery Van - DM-11-2233 (Odometer: 8,150 km)</option>
-                                            <option value="4">Prime Mover - KHL-44-1122 (Odometer: 95,400 km)</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label class="form-label text-secondary small fw-bold">Date <span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" class="form-control border datepicker"
-                                            placeholder="Select Date">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label class="form-label text-secondary small fw-bold">Quantity <span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" class="form-control border" placeholder="e.g 20">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label class="form-label text-secondary small fw-bold">Odometer <span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" class="form-control border" placeholder="e.g 657495">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label class="form-label text-secondary small fw-bold">Amount <span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" class="form-control border" placeholder="e.g 5000">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label class="form-label text-secondary small fw-bold">Receipt #</label>
-                                        <input type="file" class="form-control border" placeholder="e.g, 123456">
-                                        <div>
-                                            <img src="./assets/images/res.png" alt="receipt" class="mt-3 rounded"
-                                                style="width: 100px; height: 100px">
+                    <div class="table-responsive overflow-auto">
+                        <table
+                            class="table table-striped table-borderless border-0 table-hover custom-table datatables">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Company</th>
+                                    <th scope="col">Contact Person</th>
+                                    <th scope="col">Mobile</th>
+                                    <th scope="col">Date of Contract</th>
+                                    <th scope="col">Contract Doc</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col" class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="align-middle">
+                                    <th>1</th>
+                                    <th>Sinatra Moving Co</th>
+                                    <td>Sergio</td>
+                                    <td>2130009933</td>
+                                    <td>01-05-2026</td>
+                                    <td>-</td>
+                                    <td>Los Angeles, CA</td>
+                                    <td>
+                                        <span class="badge bg-success">Active</span>
+                                    </td>
+                                    <td class="d-flex gap-2">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-info dropdown-toggle"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Action
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li><a class="dropdown-item" href="#"><i
+                                                            class="ri-eye-fill me-2 text-info"></i>View</a></li>
+                                                <li><a class="dropdown-item" href="./rental-edit.html"><i
+                                                            class="ri-edit-fill me-2 text-warning"></i>Edit</a></li>
+                                                <li><a class="dropdown-item" href="#"><i
+                                                            class="bi bi-trash-fill me-2 text-danger"></i>Delete</a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                    </div>
-
-                                    <div class="col-md-12 mb-3">
-                                        <label
-                                            class="form-label text-secondary small text-uppercase fw-bold">Notes</label>
-                                        <textarea class="form-control border" rows="3"
-                                            placeholder="Optional notes..."></textarea>
-                                    </div>
-                                </div>
-
-
-                                <!-- Footer Buttons -->
-                                <div class="d-flex justify-content-end gap-2 mt-3">
-                                    <a href="./fuel.html" class="btn btn-outline-danger rounded-pill px-4">Cancel</a>
-                                    <button type="submit" class="btn btn-info rounded-pill px-4 fw-bold">Save
-                                        Changes</button>
-                                </div>
-                            </form>
-                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-
-
     <script src="./assets/vendor/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/vendor/js/adminlte.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="./assets/app.js"></script>
 
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script src="./assets/app.js"></script>
 </body>
 
 </html>

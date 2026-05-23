@@ -91,6 +91,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 $(document).ready(function () {
+    var hasExport = $('#tableButtons').length > 0;
+
+    var buttonConfig = [];
+    if (hasExport) {
+        buttonConfig = [
+            {
+                extend: 'excelHtml5',
+                text: 'Export to Excel',
+                className: 'btn btn-warning btn-sm me-2 rounded-3',
+                exportOptions: { columns: ':visible' }
+            },
+            {
+                extend: 'pdfHtml5',
+                text: 'Export to PDF',
+                className: 'btn btn-info btn-sm rounded-3',
+                exportOptions: { columns: ':visible' }
+            }
+        ];
+    }
+
     var table = $('.datatables').DataTable({
         "pageLength": 10,
         "language": {
@@ -103,18 +123,15 @@ $(document).ready(function () {
             }
         },
         "dom": '<"d-flex justify-content-between align-items-center mb-4 mt-2"lf>rt<"d-flex justify-content-between align-items-center mt-4"ip>',
+        "buttons": buttonConfig
     });
 
-    $('#statusDropdown').on('change', function () {
-        var filterValue = $(this).val();
-
-        if (filterValue === 'all') {
-            table.search('').draw();
-        } else {
-            table.search(filterValue).draw();
-        }
-    });
+    if (hasExport) {
+        table.buttons().container().appendTo('#tableButtons');
+    }
 });
+
+
 
 // Select2
 $(document).ready(function () {
